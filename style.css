@@ -1,0 +1,107 @@
+* {
+	margin: 0 ;
+	padding: 0;
+}
+
+/*header {
+	display: flex;
+	flex-flow: row wrap;
+}*/
+
+body {
+	font-family: "PT Sans", sans-serif;
+}
+
+.head {
+	max-width: 900px;
+	margin: auto;
+	display: flex;
+	padding: 10px 0;
+}
+
+.head_logo {
+	flex: 3;
+}
+
+.head_contact{
+	flex: 1;
+}
+
+.head_contact_p {
+	font-weight: 700;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.head_contact a {
+	color: #000;
+	font-weight:700;
+	font-size: 18px;
+	text-decoration: none;
+
+}
+
+.head_phone1 {
+	padding-left: 10px;
+}
+.head_callback{
+	flex: 1;
+}
+
+.head_callback p {
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+.head_callback a {
+	color:#368c02;
+	font-size: 12px;
+}
+
+.callback {
+    background-image: linear-gradient(to top, #640000 0%, #640000 3%, #8c0202 5%, #e30000 100%);
+    border-radius: 5px;
+    padding: 15px 30px;
+}
+
+.callback a {
+	color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+/*.head_inner {
+	 display: flex;
+    flex: 3;
+}*/
+
+
+
+nav {
+	display: flex;
+	height: 50px;
+	background-color: #368c02;
+}
+
+.nav_container {
+	width: 750px;
+	margin: auto;
+	
+}
+
+nav ul {
+	display: flex;
+	
+}
+
+nav li {
+	display: inline;
+  	text-align: center;
+  	flex: 1;
+}
+
+.nav_menu a {
+	color: #fff;
+	font-size: 18px;
+
+}
+
