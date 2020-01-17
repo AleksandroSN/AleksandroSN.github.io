@@ -738,3 +738,7 @@ nav li {
     top: 15%;
     width: 60%;
 }
+
+.footer {
+	min-height:100px;
+}
