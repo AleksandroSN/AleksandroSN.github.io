@@ -21,6 +21,11 @@ input::placeholder {
 
 body {
 	font-family: "PT Sans", sans-serif;
+	overflow-x:hidden ;
+}
+
+html {
+	overflow-x:hidden ;
 }
 
 h1,h2 {
@@ -292,6 +297,7 @@ nav li {
 	background-position: center;
 	min-height: 120px;
 	display: flex;
+	padding: 0 0 50px 0
 	    
 }
 
@@ -299,7 +305,7 @@ nav li {
 	max-width: 940px;
 	font-size: 5vh;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	width: 100%;
 	margin: auto;
 	justify-content: center;
@@ -316,7 +322,8 @@ nav li {
     background-color: #fff;
     margin-right: 5px;
     height: 55px;
-    width: 40px;
+	width: 40px;
+	padding: 7px 12px;
     text-align: center;
     }
 
@@ -334,6 +341,7 @@ nav li {
 	background-repeat:no-repeat;
 	background-position: center;
 	min-height: 660px;
+	padding: 0 0 50px 0;
 	
 }
 
