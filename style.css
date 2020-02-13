@@ -297,7 +297,6 @@ nav li {
 	background-position: center;
 	min-height: 120px;
 	display: flex;
-	padding: 0 0 50px 0
 	    
 }
 
@@ -321,9 +320,7 @@ nav li {
 	border-radius: 10px;
     background-color: #fff;
     margin-right: 5px;
-    height: 55px;
-	width: 40px;
-	padding: 7px 12px;
+    padding: 7px 12px;
     text-align: center;
     }
 
