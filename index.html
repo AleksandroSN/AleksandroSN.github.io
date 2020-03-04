@@ -2,18 +2,27 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="min.style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<title>Elochka,BURN!</title>
 </head>
 <body>
 	<header>
-		<div class="container">
+		<div class="container flex">
 				<div class="logo">
 					<img src="images/logo.png" alt="logo">
 				</div>
 
+				
+
+				<div class="phone">
+						<p class="phone__p">Есть вопросы? Звоните!</p>
+						<p class="phone__phone1"><a href="tel:8(800)200-40-17">8(800)200-40-17</a></p>
+						<p class="phone__phone2"><a href="tel:+7(499)404-14-31">+7(499)404-14-31</a></p>
+				</div>
+				
 				<div class="callback">
 					<p><a href="mailo:info@elockagori.ru">info@elockagori.ru</a></p>
 
@@ -21,27 +30,26 @@
 						<a href="#">ЗАКАЗАТЬ  ЗВОНОК</a>
 					</div>
 				</div>
-
-				<div class="phone">
-						<p class="phone__p">Есть вопросы? Звоните!</p>
-						<p class="phone__phone1"><a href="tel:8(800)200-40-17">8(800)200-40-17</a></p>
-						<p class="phone__phone2"><a href="tel:+7(499)404-14-31">+7(499)404-14-31</a></p>
-				</div>				
 		</div>
+
+		<nav>
+			<div class="container">
+				<div class="nav-toggle">
+					<span></span>
+				</div>
+				<ul id="container__nav_menu">
+					<li><a href="#cat1">Искуственные ёлки</a></li>
+					<li><a href="#cat2">Живые ёлки</a></li>
+					<li><a href="#cat3">Елочки из конфет</a></li>
+					<li><a href="#cat4">Украшения для елок</a></li>	
+				</ul>
+			</div>
+		</nav>
+
 	</header>
 	
-	<nav>
-		<div class="container">
-			<ul class="container__nav_menu">
-				<li><a href="#">Искуственные ёлки</a></li>
-				<li><a href="#">Живые ёлки</a></li>
-				<li><a href="#">Елочки из конфет</a></li>
-				<li><a href="#">Украшения для елок</a></li>	
-			</ul>
-		</div>
-	</nav>
-			
 
+			
 	<section class="top">
 		<div class="container">			
 		
@@ -97,6 +105,7 @@
 
 	<section class="count">
 		<div class="count_inner">
+			<h2>count</h2>
 			<p>У нас уже заказали:</p>
 			<span>1</span>
 			<span>5</span>
@@ -194,15 +203,15 @@
 			</div>
 			<h2>Наше производство</h2>
 			<div class="review-3inrow">
-				<figure>
+				<figure class="review-3inrow__img">
 					<img src="images/row_1.jpg" alt="row_1.png">
 					<figcaption>Контроль качества продукции</figcaption>
 				</figure>
-				<figure>
+				<figure class="review-3inrow__img">
 					<img src="images/row_2.jpg" alt="row_2.png">
 					<figcaption>Пример выкладки</figcaption>
 				</figure>
-				<figure>
+				<figure class="review-3inrow__img">
 					<img src="images/row_3.jpg" alt="row_3.png">
 				<figcaption>Сопутствующие товары</figcaption>
 				</figure>
@@ -210,7 +219,7 @@
 		</div>
 	</section>
 
-	<section class="catalog-1">
+	<section class="catalog-1" id="cat1">
 		<div class="container">
 			<h2>Каталог искуственных елок</h2>
 			<div class="catalog-wrapper">
@@ -322,7 +331,7 @@
 		</div>
 	</section>
 
-	<section class="catalog-2">
+	<section class="catalog-2" id="cat2">
 		<div class="container">
 			<h2>Каталог живых елок</h2>
 			<div class="catalog-wrapper">
@@ -382,7 +391,7 @@
 		</div>
 	</section>
 
-	<section class="catalog-3">
+	<section class="catalog-3" id="cat3">
 		<div class="container">
 			<h2>Каталог елочек из конфет</h2>
 			<div class="catalog-3__wrapper">
@@ -428,7 +437,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="catalog-4">
+	<section class="catalog-4" id="cat4">
 		<div class="container">
 			<h2>Каталог украшений для елок</h2>
 			<div class="catalog-wrapper">
@@ -476,7 +485,9 @@
 	</section>
 
 	<section class="contacts">
-		<div class="container">
+		<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8081cd72a481454dc0e80ca3d7fc98135d951aa3ff18ca89b7a98ccde22ff29a&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+		
+		<div class="container bottom-line">
 			<div class="contacts-phone">
 				<img src="images/cont-2.png" alt="cont-2.png">
 				<div class="contacts-phone__wrapper">
@@ -492,10 +503,16 @@
 	</section>
 
 	<footer>
-		<div class="container">
+		<div class="container flex">
 			<div class="logo">
 				<img src="images/logo.png" alt="logo">
 			</div>
+
+			<div class="phone">
+				<p class="phone__p">Есть вопросы? Звоните!</p>
+				<p class="phone__phone1"><a href="tel:8(800)200-40-17">8(800)200-40-17</a></p>
+				<p class="phone__phone2"><a href="tel:+7(499)404-14-31">+7(499)404-14-31</a></p>
+			</div>	
 
 			<div class="callback">
 				<p><a href="mailo:info@elockagori.ru">info@elockagori.ru</a></p>
@@ -503,15 +520,14 @@
 				<div class="callback-button">
 					<a href="#">ЗАКАЗАТЬ  ЗВОНОК</a>
 				</div>
-			</div>
-
-			<div class="phone">
-					<p class="phone__p">Есть вопросы? Звоните!</p>
-					<p class="phone__phone1"><a href="tel:8(800)200-40-17">8(800)200-40-17</a></p>
-					<p class="phone__phone2"><a href="tel:+7(499)404-14-31">+7(499)404-14-31</a></p>
-			</div>				
-	</div>
+			</div>						
+		</div>
 
 	</footer>
+	<script>
+		$('.nav-toggle').on('click', function(){
+		$('#container__nav_menu').toggleClass('active');
+		});
+		</script>
 </body>
 </html>
