@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/animate.css" />
     <link
@@ -20,12 +20,12 @@
         </a>
         <input
           type="text"
-          name=""
+          name="samename"
           class="header__input input"
           placeholder="Адрес доставки"
         />
         <div class="buttons">
-          <button class="button button-signin">
+          <button class="button button-primary">
             <img src="./img/profile.svg" alt="" class="button-img" />
             <span class="button-text">Войти</span>
           </button>
@@ -35,133 +35,199 @@
           </button>
         </div>
       </header>
-      <main class="bg-grad">
+
+      <main class="main">
         <section class="restaraunts">
-          <div class="restaraunts-heading">
+          <div class="restaraunts-head">
             <h2 class="restaraunts-heading__text">Тануки</h2>
             <div class="card-info">
-              <div class="rating">4.5</div>
+              <div class="rating">
+                <img src="./img/rating.svg" alt="" class="restaraunts-rating" />
+                4.5
+              </div>
               <div class="price">От 900 ₽</div>
-              <div class="category">Пицца</div>
+              <div class="category">Пицца и суши</div>
             </div>
-            <!-- /.card-info -->
           </div>
         </section>
         <section class="cards">
           <div class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/res6.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
+                <h3 class="card-title">Ролл угорь стандарт</h3>
               </div>
               <div class="card-info">
                 <div class="ingridients">
-                  Бла бла бла бла бла бла
+                  Рис, угорь, соус унаги, кунжут, водоросли нори.
                 </div>
               </div>
               <div class="card-buttons">
                 <button class="button button-primary">
-                  <span class="button-card-text">Корзина</span>
-                  <img src="./img/shopping2.svg" alt="shopping" />
+                  <span class="button-card-text">В корзину</span>
+                  <img
+                    src="./img/shopping2.svg"
+                    alt="shopping"
+                    class="card-buttons__shopping"
+                  />
                 </button>
+                <strong class="card-price-bold">250 ₽</strong>
               </div>
-              <strong class="card-price-bold">250 ₽</strong>
             </div>
           </div>
+          <!-- cards-inner-END -->
 
           <div class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/res4.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
-                <span class="card-tag tag">50 мин</span>
+                <h3 class="card-title">Калифорния лосось стандарт</h3>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="ingridients">
+                  Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли
+                  нори.
+                </div>
               </div>
-              <!-- /.card-info -->
+              <div class="card-buttons">
+                <button class="button button-primary">
+                  <span class="button-card-text">В корзину</span>
+                  <img
+                    src="./img/shopping2.svg"
+                    alt="shopping"
+                    class="card-buttons__shopping"
+                  />
+                </button>
+                <strong class="card-price-bold">395 ₽</strong>
+              </div>
             </div>
           </div>
+          <!-- cards-inner-END -->
+
           <div class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/res2.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
-                <span class="card-tag tag">50 мин</span>
+                <h3 class="card-title">Окинава стандарт</h3>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="ingridients">
+                  Рис, креветка отварная, сыр сливочный, лосось, огурец
+                  свежий...
+                </div>
               </div>
-              <!-- /.card-info -->
+              <div class="card-buttons">
+                <button class="button button-primary">
+                  <span class="button-card-text">В корзину</span>
+                  <img
+                    src="./img/shopping2.svg"
+                    alt="shopping"
+                    class="card-buttons__shopping"
+                  />
+                </button>
+                <strong class="card-price-bold">250 ₽</strong>
+              </div>
             </div>
           </div>
+          <!-- cards-inner-END -->
+
           <div class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/res5.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
-                <span class="card-tag tag">50 мин</span>
+                <h3 class="card-title">Цезарь маки хl</h3>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="ingridients">
+                  Рис, куриная грудка копченая, икра масаго, томат, айсберг,
+                  соус цезарь...
+                </div>
               </div>
-              <!-- /.card-info -->
+              <div class="card-buttons">
+                <button class="button button-primary">
+                  <span class="button-card-text">В корзину</span>
+                  <img
+                    src="./img/shopping2.svg"
+                    alt="shopping"
+                    class="card-buttons__shopping"
+                  />
+                </button>
+                <strong class="card-price-bold">250 ₽</strong>
+              </div>
             </div>
           </div>
+          <!-- cards-inner-END -->
+
           <div class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/res3.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
-                <span class="card-tag tag">50 мин</span>
+                <h3 class="card-title">Ясай маки стандарт 185 г</h3>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="ingridients">
+                  Рис, помидор свежий, перец болгарский, авокадо, огурец,
+                  айсберг
+                </div>
               </div>
-              <!-- /.card-info -->
+              <div class="card-buttons">
+                <button class="button button-primary">
+                  <span class="button-card-text">В корзину</span>
+                  <img
+                    src="./img/shopping2.svg"
+                    alt="shopping"
+                    class="card-buttons__shopping"
+                  />
+                </button>
+                <strong class="card-price-bold">250 ₽</strong>
+              </div>
             </div>
           </div>
+          <!-- cards-inner-END -->
+
           <div class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/res1.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
-                <span class="card-tag tag">50 мин</span>
+                <h3 class="card-title">Ролл с креветкой стандарт</h3>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="ingridients">
+                  Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы
+                </div>
               </div>
-              <!-- /.card-info -->
+              <div class="card-buttons">
+                <button class="button button-primary">
+                  <span class="button-card-text">В корзину</span>
+                  <img
+                    src="./img/shopping2.svg"
+                    alt="shopping"
+                    class="card-buttons__shopping"
+                  />
+                </button>
+                <strong class="card-price-bold">250 ₽</strong>
+              </div>
             </div>
           </div>
+          <!-- cards-inner-END -->
         </section>
       </main>
       <footer class="footer">

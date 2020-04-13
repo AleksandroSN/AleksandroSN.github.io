@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -19,22 +20,23 @@
         </a>
         <input
           type="text"
-          name=""
+          name="samename"
           class="header__input input"
           placeholder="Адрес доставки"
         />
         <div class="buttons">
-          <button class="button button-signin">
+          <button class="button button-primary">
             <img src="./img/profile.svg" alt="" class="button-img" />
             <span class="button-text">Войти</span>
           </button>
-          <button class="button button-shopping">
+          <button class="button button-shopping" id="cart-button">
             <img src="./img/shopping.svg" alt="" class="button-img" />
             <span class="button-text">Корзина</span>
           </button>
         </div>
       </header>
-      <main class="bg-grad">
+
+      <main class="main">
         <section class="promo">
           <div class="promo-inner">
             <h1 class="promo-title">Онлайн-сервис <br />доставки еды на дом</h1>
@@ -49,15 +51,15 @@
             <h2 class="restaraunts-heading__text">Рестораны</h2>
             <input
               type="text"
-              name=""
-              id=""
+              name="samename"
+              id="sameid"
               class="restaraunts-heading__search input"
               placeholder="Поиск блюд и ресторанов"
             />
           </div>
         </section>
         <section class="cards">
-          <div class="cards-inner">
+          <a href="restoraunt.html" class="cards-inner">
             <div class="cards-inner__heading">
               <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
             </div>
@@ -68,104 +70,149 @@
                 <span class="card-tag tag">50 мин</span>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
+                <div class="rating">
+                  <img
+                    src="./img/rating.svg"
+                    alt=""
+                    class="restaraunts-rating"
+                  />
+                  4.5
+                </div>
                 <div class="price">От 900 ₽</div>
                 <div class="category">Пицца</div>
               </div>
-              <!-- /.card-info -->
             </div>
-          </div>
+          </a>
 
-          <div class="cards-inner">
+          <a href="restoraunt.html" class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/image2.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
+                <h3 class="card-title">Тануки</h3>
                 <span class="card-tag tag">50 мин</span>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="rating">
+                  <img
+                    src="./img/rating.svg"
+                    alt=""
+                    class="restaraunts-rating"
+                  />
+                  4.5
+                </div>
+                <div class="price">От 500 ₽</div>
+                <div class="category">Суши</div>
               </div>
               <!-- /.card-info -->
             </div>
-          </div>
-          <div class="cards-inner">
+          </a>
+
+          <a href="restoraunt.html" class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/image3.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
+                <h3 class="card-title">FoodBand</h3>
                 <span class="card-tag tag">50 мин</span>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="rating">
+                  <img
+                    src="./img/rating.svg"
+                    alt=""
+                    class="restaraunts-rating"
+                  />
+                  4.5
+                </div>
+                <div class="price">От 1900 ₽</div>
+                <div class="category">Всякое</div>
               </div>
               <!-- /.card-info -->
             </div>
-          </div>
-          <div class="cards-inner">
+          </a>
+
+          <a href="restoraunt.html" class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/image4.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
+                <h3 class="card-title">Пицца-жадина</h3>
                 <span class="card-tag tag">50 мин</span>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
+                <div class="rating">
+                  <img
+                    src="./img/rating.svg"
+                    alt=""
+                    class="restaraunts-rating"
+                  />
+                  4.5
+                </div>
+                <div class="price">От 2000 ₽</div>
                 <div class="category">Пицца</div>
               </div>
               <!-- /.card-info -->
             </div>
-          </div>
-          <div class="cards-inner">
+          </a>
+
+          <a href="restoraunt.html" class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/image5.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
+                <h3 class="card-title">Точка еды</h3>
                 <span class="card-tag tag">50 мин</span>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="rating">
+                  <img
+                    src="./img/rating.svg"
+                    alt=""
+                    class="restaraunts-rating"
+                  />
+                  4.5
+                </div>
+                <div class="price">От 800 ₽</div>
+                <div class="category">Вкусная еда</div>
               </div>
               <!-- /.card-info -->
             </div>
-          </div>
-          <div class="cards-inner">
+          </a>
+
+          <a href="restoraunt.html" class="cards-inner">
             <div class="cards-inner__heading">
-              <img src="./img/image1.jpg" alt="" class="cards-inner__img" />
+              <img src="./img/image6.jpg" alt="" class="cards-inner__img" />
             </div>
 
             <div class="cards-inner__text">
               <div class="text-head">
-                <h3 class="card-title">Пицца плюс</h3>
+                <h3 class="card-title">PizzaBurger</h3>
                 <span class="card-tag tag">50 мин</span>
               </div>
               <div class="card-info">
-                <div class="rating">4.5</div>
-                <div class="price">От 900 ₽</div>
-                <div class="category">Пицца</div>
+                <div class="rating">
+                  <img
+                    src="./img/rating.svg"
+                    alt=""
+                    class="restaraunts-rating"
+                  />
+                  4.5
+                </div>
+                <div class="price">От 100 ₽</div>
+                <div class="category">Пицца и бургер</div>
               </div>
               <!-- /.card-info -->
             </div>
-          </div>
+          </a>
         </section>
       </main>
       <footer class="footer">
@@ -204,6 +251,70 @@
           </li>
         </ul>
       </footer>
+      <div class="modal">
+        <div class="modal-dialog">
+          <div class="modal-head">
+            <h3 class="modal-title">Корзина</h3>
+            <button class="close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="food-row">
+              <span class="food-name">Ролл угорь стандарт</span>
+              <strong class="food-price">250 р</strong>
+              <div class="food-counter">
+                <button class="counter-button">-</button>
+                <span class="counter">1</span>
+                <button class="counter-button">+</button>
+              </div>
+            </div>
+            <div class="food-row">
+              <span class="food-name">Ролл угорь стандарт</span>
+              <strong class="food-price">250 р</strong>
+              <div class="food-counter">
+                <button class="counter-button">-</button>
+                <span class="counter">1</span>
+                <button class="counter-button">+</button>
+              </div>
+            </div>
+            <div class="food-row">
+              <span class="food-name">Ролл угорь стандарт</span>
+              <strong class="food-price">250 р</strong>
+              <div class="food-counter">
+                <button class="counter-button">-</button>
+                <span class="counter">1</span>
+                <button class="counter-button">+</button>
+              </div>
+            </div>
+            <div class="food-row">
+              <span class="food-name">Ролл угорь стандарт</span>
+              <strong class="food-price">250 р</strong>
+              <div class="food-counter">
+                <button class="counter-button">-</button>
+                <span class="counter">1</span>
+                <button class="counter-button">+</button>
+              </div>
+            </div>
+            <div class="food-row">
+              <span class="food-name">Ролл угорь стандарт</span>
+              <strong class="food-price">250 р</strong>
+              <div class="food-counter">
+                <button class="counter-button">-</button>
+                <span class="counter">1</span>
+                <button class="counter-button">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <span class="price-tag">1250 P</span>
+            <div class="footer-buttons">
+              <button class="button button-signin">Оформить заказ</button>
+              <button class="button">Отмена</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
