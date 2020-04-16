@@ -1,0 +1,151 @@
+@media screen and (max-width: 1366px) {
+  .wrapper {
+    max-width: 960px;
+  }
+  .promo-inner {
+    background: #fff1b8 url(../img/pizza.png) no-repeat top 30px right -200px / 750px;
+  }
+
+  .cards-info__rating {
+    margin-right: 10px;
+    flex: 1 1 100%;
+    order: 3;
+  }
+
+  .restaraunts-head__search {
+    flex: 0.4;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    max-width: 750px;
+  }
+
+  .promo {
+    padding: 50px;
+    background-size: 500px;
+
+    &-text {
+      font-size: 1.125rem;
+      max-width: 400px;
+    }
+  }
+
+  .cards-inner {
+    flex-basis: 49%;
+  }
+
+  .footer-list {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 700px;
+  }
+
+  .promo {
+    padding: 50px 0;
+
+    &-inner {
+      background: #fff1b8 url(../img/pizza.png) no-repeat top -25px right -205px /
+        500px;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+  }
+
+  .restaraunts-head__search {
+    flex: 1;
+    margin-top: 10px;
+  }
+
+  .footer {
+    justify-content: space-between;
+
+    .logo-home {
+      order: 1;
+    }
+
+    &__social {
+      order: 2;
+      margin-left: 0;
+    }
+
+    &-list {
+      flex-flow: column wrap;
+    }
+  }
+
+  .cards-title {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  .button-text {
+    display: none;
+  }
+
+  .header {
+    flex-wrap: wrap;
+
+    .logo-home {
+      order: 1;
+    }
+
+    &__input {
+      order: 3;
+      flex: 1;
+      margin-top: 10px;
+    }
+  }
+
+  .buttons {
+    order: 2;
+  }
+
+  .promo {
+    padding: 0;
+
+    &-inner {
+      background: #fff1b8;
+      padding: 68px 10px;
+    }
+  }
+
+  .cards-inner {
+    flex: 1 1 100%;
+  }
+
+  .footer__social {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    order: 3;
+    padding: 5px 0;
+  }
+
+  .footer-list {
+    flex: 1 1 100%;
+    order: 2;
+    padding: 5px 0;
+  }
+
+  .footer .logo-home {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    order: 1;
+    padding: 5px 0;
+  }
+}

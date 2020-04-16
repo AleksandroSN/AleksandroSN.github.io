@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="./css/style.min.css")
+        link(rel="stylesheet", href="./css/normalize.css")
+        link(rel="stylesheet", href="./css/animate.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap")
+        title Delivery
+    body
+        .wrapper
+            block header
+                include header
+            block content
+            block footer
+                include footer
+            block includes
+                include ../includes/modal.pug
+        script(src='./js/wow.min.js')
+        script(src='./js/main.js')
