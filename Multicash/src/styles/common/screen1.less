@@ -1,0 +1,123 @@
+.screen1 {
+  background: url("../img/main.webp") no-repeat center center;
+  background-size: cover;
+  min-height: 85vh;
+
+  &-top__h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 3.75rem;
+    padding: 0 11.475rem;
+  }
+
+  &-top__p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.1875rem;
+  }
+
+  &-middle {
+    max-width: 1109px;
+    width: 100%;
+    border-radius: 26px;
+    border: 4px solid #f7f8fd;
+    background-color: #ffffff;
+    margin-top: 3.125rem;
+    opacity: 0.8;
+    box-shadow: 0px 5px 20px 3px #cecece;
+  }
+
+  &-top {
+    margin-top: 7.0625rem;
+  }
+
+  &-form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 4.875rem 2rem 4.6875rem 6.6875rem;
+    position: relative;
+  }
+
+  &-form__left,
+  &-form__middle {
+    flex-basis: 350px;
+    border-bottom: 1px solid #d6dce2;
+    padding-bottom: 0.3125rem;
+  }
+
+  &-form__img {
+    padding: 0 1.5625rem 0.9375rem;
+    align-self: flex-end;
+  }
+
+  &-form__select {
+    border-width: 0;
+    padding: 0 1rem 0 3rem;
+    border-left: 1px solid #cfd4da;
+    -webkit-appearance: none;
+    height: 35px;
+    line-height: 1.1875rem;
+    color: #4e5983;
+    font-weight: 300;
+    cursor: pointer;
+
+    &_left {
+      background: url(../img/sber.png) left 10px center no-repeat,
+        url(../img/arrdown.svg) no-repeat center right;
+    }
+
+    &_right {
+      background: url(../img/cash.png) left 10px center no-repeat,
+        url(../img/arrdown.svg) no-repeat center right;
+    }
+  }
+
+  &-form__title {
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #4e5983;
+    padding-bottom: 2rem;
+  }
+
+  &-form__span {
+    padding-left: 0.3125rem;
+    font-size: 0.75rem;
+    line-height: 14px;
+    opacity: 0.5;
+    color: #4e5983;
+  }
+
+  &-form__subtitle {
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 17px;
+    color: #4e5983;
+    opacity: 0.5;
+  }
+
+  &-form__right {
+    background: linear-gradient(163.94deg, #562ec2 29.59%, #a07efe 73.59%);
+    opacity: 0.8;
+    border-radius: 9px;
+    align-self: flex-end;
+    margin-left: 2rem;
+
+    button {
+      font-size: 0.875rem;
+      line-height: 17px;
+      text-align: center;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 1.125rem 2.875rem;
+    }
+  }
+
+  &-form__input {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.015rem;
+    color: #094067;
+    border-width: 0;
+  }
+}

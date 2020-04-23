@@ -1,0 +1,20 @@
+header.header
+  .wrapper.flex 
+    .header-logo
+      img(src="./img/logo.svg", alt="logo")
+      p.header-logo__text
+        span.header-logo__text.text-bold moneyex
+        | change            
+    nav.nav-menu       
+      ul.nav-menu__list
+        li.nav-menu__list-item 
+          a.nav-menu__list-link(href="#") Компания
+        li.nav-menu__list-item 
+          a.nav-menu__list-link(href="#") Блог
+        li.nav-menu__list-item 
+          a.nav-menu__list-link(href="#") Контакты
+    .signzone    
+      //- a.signzone__vhod(href="#" type="button") 
+      //- a.signzone_register(href="#" type="button") 
+      button.signzone__vhod(type="submit") Вход
+      button.signzone__register(type="submit") Регистрация   

@@ -1,0 +1,71 @@
+@import "normalize.css";
+@import "./common/global.less";
+@import "fonts.less";
+@import "./mixins/media.less";
+@import "./common/header.less";
+@import "./common/screen1.less";
+@import "./common/screen2.less";
+@import "./common/screen3.less";
+@import "./common/screen4.less";
+@import "./common/footer.less";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  color: #4e5983;
+}
+
+button {
+  border-width: 0;
+  background: transparent;
+}
+
+header {
+  width: 100%;
+  padding: 1.25rem 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  // max-width: 1140px;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.z-index {
+  z-index: -1;
+}

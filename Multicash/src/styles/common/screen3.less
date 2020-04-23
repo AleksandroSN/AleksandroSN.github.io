@@ -1,0 +1,164 @@
+.screen3 {
+	padding-top: 140px;
+
+	&-h2 {
+		text-align: center;
+		font-weight: 500;
+		font-size: 35px;
+		line-height: 39px;
+		color: #160647;
+	}
+
+	&-list {
+		padding-top: 59px;
+	}
+
+	&-numbers {
+		position: relative;
+		flex-basis: 219px;
+		margin-right: 2rem;
+		padding-bottom: 84px;
+
+		&__img {
+			position: absolute;
+			bottom: 85px;
+		}
+
+		&__title {
+			padding-left: 85px;
+			line-height: 19px;
+			color: #a4aabf;
+			font-weight: 400;
+			padding-bottom: 2px;
+		}
+
+		&__text {
+			padding-left: 85px;
+			font-size: 20px;
+			line-height: 31px;
+			color: #160647;
+			height: 32px;
+		}
+	}
+}
+
+.screen3-comments {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 3rem;
+
+	&__title {
+		font-weight: 500;
+		font-size: 35px;
+		line-height: 46px;
+		color: #160647;
+		flex: 100%;
+	}
+
+	&__inner-block {
+		flex: 1;
+		padding: 0 7rem 2.5rem 0;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__inner-block::before {
+		content: "";
+		background: url("../img/imgcom.png") no-repeat;
+		height: 200px;
+		width: 200px;
+		position: absolute;
+		z-index: -1;
+		top: 20%;
+		left: -13%;
+	}
+
+	&__text {
+		margin-top: 7rem;
+		padding-bottom: 1rem;
+		font-size: 18px;
+		line-height: 30px;
+		color: #4e5983;
+		opacity: 0.7;
+		min-height: 200px;
+	}
+
+	&__author {
+		flex: auto;
+		color: #160647;
+		font-size: 20px;
+		line-height: 31.1px;
+	}
+
+	&__data {
+		color: #838ba8;
+		font-size: 14px;
+		align-self: center;
+	}
+}
+
+.screen3-arrows {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+
+	&__left {
+		margin-right: 20px;
+		border: 2px solid #838ba8;
+		opacity: 0.3;
+		width: 37px;
+		position: relative;
+	}
+	&__left::before {
+		content: "";
+		border: solid #838ba8;
+		border-width: 4px 4px 0 0;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		top: -10px;
+		right: 20px;
+		transform: rotate(225deg);
+	}
+
+	&__left:hover {
+		border: 2px solid #a17fff;
+		opacity: 1;
+	}
+
+	&__left:hover::before {
+		border: solid #a17fff;
+		border-width: 4px 4px 0 0;
+		opacity: 1;
+	}
+
+	&__right {
+		width: 72px;
+		border: 2px solid #838ba8;
+		position: relative;
+		opacity: 0.3;
+	}
+
+	&__right:hover {
+		border: 2px solid #a17fff;
+		opacity: 1;
+	}
+
+	&__right:hover:after {
+		border: solid #a17fff;
+		border-width: 4px 4px 0 0;
+		opacity: 1;
+	}
+
+	&__right:after {
+		content: "";
+		border: solid #838ba8;
+		border-width: 4px 4px 0 0;
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		top: -10px;
+		right: -3px;
+		transform: rotate(45deg);
+	}
+}

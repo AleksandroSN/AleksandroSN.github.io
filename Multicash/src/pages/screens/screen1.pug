@@ -1,0 +1,28 @@
+.screen1
+    .wrapper.flex
+        .screen1-top            
+            h1.screen1-top__h1 Мультивалютный обменный сервис 24/7
+            p.screen1-top__p Быстрый обмен без скрытых комиссий
+        .screen1-middle
+            form.screen1-form(action="#", method="get")                 
+                .screen1-form__left
+                    p.screen1-form__title Вы отдаете
+                    p.screen1-form__subtitle Сумма
+                    input.screen1-form__input(type="text", name="name" placeholder="1000.00")
+                    select.screen1-form__select.screen1-form__select_left(name="sources")
+                        option(value="RUB") RUB
+                        option(value="EUR") EUR
+                        option(value="USD") USD
+                img.screen1-form__img(src="./img/arrows.png", alt="img")    
+                .screen1-form__middle
+                    p.screen1-form__title
+                        | Вы получаете
+                        span.screen1-form__span с учетом комиссии ПС (0.5%)
+                    p.screen1-form__subtitle Сумма
+                    input.screen1-form__input(type="text", name="name2" placeholder="970.00")
+                    select.screen1-form__select.screen1-form__select_right(name="sources2")
+                        option(value="RUB") RUB
+                        option(value="EUR") EUR
+                        option(value="USD") USD
+                .screen1-form__right
+                    button(type="submit") Обменять
