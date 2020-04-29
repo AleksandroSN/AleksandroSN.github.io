@@ -2,12 +2,14 @@
 @import "./common/global.less";
 @import "fonts.less";
 @import "./mixins/media.less";
+@import './mixins/mixin.less';
 @import "./common/header.less";
 @import "./common/screen1.less";
 @import "./common/screen2.less";
 @import "./common/screen3.less";
 @import "./common/screen4.less";
 @import "./common/footer.less";
+@import "../../node_modules/swiper/css/swiper.min.css";
 
 *,
 *::after,
@@ -46,7 +48,6 @@ header {
 .wrapper {
 	position: relative;
 	width: 100%;
-	// max-width: 1140px;
 	max-width: 1210px;
 	margin: 0 auto;
 	padding: 0 15px;
@@ -63,10 +64,26 @@ header {
 	align-items: flex-start;
 }
 
-.space-between {
+.spc-btw-elem {
 	justify-content: space-between;
 }
 
-.z-index {
-	z-index: -1;
+.top-button {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background: #a07efe;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 100px;
+	bottom: 100px;
+	z-index: 1000;
+}
+
+.top-button img {
+	position: absolute;
+	left: 0;
+	top: 0;
 }

@@ -1,23 +1,23 @@
 .screen3 {
-	padding-top: 140px;
+	padding-top: 8.75rem;
 
 	&-h2 {
 		text-align: center;
 		font-weight: 500;
-		font-size: 35px;
-		line-height: 39px;
+		font-size: 2.1875rem;
+		line-height: 2.4375rem;
 		color: #160647;
 	}
 
 	&-list {
-		padding-top: 59px;
+		padding-top: 3.6875rem;
 	}
 
 	&-numbers {
 		position: relative;
 		flex-basis: 219px;
 		margin-right: 2rem;
-		padding-bottom: 84px;
+		padding-bottom: 5.25rem;
 
 		&__img {
 			position: absolute;
@@ -25,19 +25,19 @@
 		}
 
 		&__title {
-			padding-left: 85px;
-			line-height: 19px;
+			padding-left: 5.3125rem;
+			line-height: 1.1875rem;
 			color: #a4aabf;
 			font-weight: 400;
 			padding-bottom: 2px;
 		}
 
 		&__text {
-			padding-left: 85px;
-			font-size: 20px;
-			line-height: 31px;
+			padding-left: 5.3125rem;
+			font-size: 1.25rem;
+			line-height: 1.9375rem;
 			color: #160647;
-			height: 32px;
+			height: 2rem;
 		}
 	}
 }
@@ -46,119 +46,125 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding-bottom: 3rem;
+	position: relative;
 
 	&__title {
 		font-weight: 500;
-		font-size: 35px;
-		line-height: 46px;
+		font-size: 2.1875rem;
+		line-height: 2.875rem;
 		color: #160647;
 		flex: 100%;
 	}
 
-	&__inner-block {
-		flex: 1;
-		padding: 0 7rem 2.5rem 0;
-		position: relative;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	&__inner-block::before {
-		content: "";
-		background: url("../img/imgcom.png") no-repeat;
-		height: 200px;
-		width: 200px;
-		position: absolute;
-		z-index: -1;
-		top: 20%;
-		left: -13%;
-	}
-
 	&__text {
 		margin-top: 7rem;
-		padding-bottom: 1rem;
-		font-size: 18px;
-		line-height: 30px;
+		padding-bottom: 3.6rem;
+		font-size: 1.125rem;
+		line-height: 1.875rem;
 		color: #4e5983;
 		opacity: 0.7;
-		min-height: 200px;
+		min-height: 125px;
 	}
 
 	&__author {
 		flex: auto;
 		color: #160647;
-		font-size: 20px;
-		line-height: 31.1px;
+		font-size: 1.25rem;
+		line-height: 1.95rem;
+		align-self: flex-end;
 	}
 
 	&__data {
 		color: #838ba8;
-		font-size: 14px;
+		font-size: 0.875rem;
 		align-self: center;
 	}
 }
 
-.screen3-arrows {
-	display: flex;
-	justify-content: flex-end;
-	width: 100%;
+.swiper-container {
+	height: 100%;
+	position: static;
+}
 
-	&__left {
-		margin-right: 20px;
-		border: 2px solid #838ba8;
-		opacity: 0.3;
-		width: 37px;
-		position: relative;
-	}
-	&__left::before {
+.swiper-slide::before {
+	content: "";
+	background: url("../img/imgcom.png") no-repeat;
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	z-index: -1;
+	top: 20%;
+	left: -13%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	top: auto;
+	bottom: 0;
+	border: 2px solid #838ba8;
+	opacity: .3;
+	height: 0;
+}
+
+.swiper-button-next {
+	width: 4.5rem;
+
+	&:after {
 		content: "";
 		border: solid #838ba8;
 		border-width: 4px 4px 0 0;
 		position: absolute;
 		width: 16px;
 		height: 16px;
-		top: -10px;
+		right: -3px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	&:hover {
+		border: solid #a17fff;
+		border-width: 4px 4px 0 0;
+		opacity: 1;
+	}
+
+	&:hover::after {
+		border: solid #a17fff;
+		border-width: 4px 4px 0 0;
+		opacity: 1;
+		bottom: -8px;
+		right: -5px;
+	}
+}
+
+.swiper-button-prev {
+	width: 37px;
+	right: 100px;
+	left: auto;
+
+	&:after {
+		content: "";
+		border: solid #838ba8;
+		border-width: 4px 4px 0 0;
+		position: absolute;
+		width: 16px;
+		height: 16px;
 		right: 20px;
 		transform: rotate(225deg);
 	}
 
-	&__left:hover {
-		border: 2px solid #a17fff;
-		opacity: 1;
-	}
-
-	&__left:hover::before {
+	&:hover::after {
 		border: solid #a17fff;
 		border-width: 4px 4px 0 0;
 		opacity: 1;
 	}
 
-	&__right {
-		width: 72px;
-		border: 2px solid #838ba8;
-		position: relative;
-		opacity: 0.3;
-	}
-
-	&__right:hover {
+	&:hover {
 		border: 2px solid #a17fff;
 		opacity: 1;
 	}
+}
 
-	&__right:hover:after {
-		border: solid #a17fff;
-		border-width: 4px 4px 0 0;
-		opacity: 1;
-	}
-
-	&__right:after {
-		content: "";
-		border: solid #838ba8;
-		border-width: 4px 4px 0 0;
-		position: absolute;
-		width: 16px;
-		height: 16px;
-		top: -10px;
-		right: -3px;
-		transform: rotate(45deg);
-	}
+.swiper-slide {
+	display: flex;
+	flex-wrap: wrap;
 }

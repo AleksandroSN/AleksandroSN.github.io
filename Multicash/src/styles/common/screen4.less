@@ -1,7 +1,13 @@
 .screen4 {
-	background: url("../img/imgslid.png") no-repeat left 356px top 58px;
-	padding: 90px 0;
-	transition: 0.3s;
+	padding: 5.625rem 0;
+
+	&-img {
+		position: absolute;
+		z-index: 100;
+		top: -32px;
+		left: 25px;
+		transition: 0.3s;
+	}
 
 	&-blur-block {
 		position: absolute;
@@ -10,7 +16,7 @@
 		height: 341px;
 		left: 50px;
 		top: 75px;
-		background: linear-gradient(165.24deg, #562ec2 29.59%, #a07efe 73.59%);
+		.bg-grad();
 		filter: blur(150px);
 		border-radius: 17px;
 	}
@@ -19,7 +25,7 @@
 		max-width: 1238px;
 		height: 447px;
 		border-radius: 17px;
-		background-image: linear-gradient(163.51deg, #562ec2 0%, #a07efe 100%);
+		.bg-grad();
 		opacity: 0.8;
 		position: relative;
 	}
@@ -31,32 +37,31 @@
 	}
 
 	&-banner__title {
-		color: #ffffff;
+		color: @w-text;
 		font-family: Rubik;
-		font-size: 35px;
+		font-size: 2.1875rem;
 		font-weight: 500;
-		line-height: 46.34px;
+		line-height: 2.9rem;
 	}
 
 	&-banner__text {
 		opacity: 0.7;
-		color: #ffffff;
-		font-size: 18px;
+		color: @w-text;
+		font-size: 1.125rem;
 		font-weight: 400;
-		line-height: 29.97px;
-		padding: 10px 0 35px;
+		line-height: 1.9rem;
+		padding: 0.625rem 0 2.1875rem;
 	}
 
 	&-button {
-		background: #fff;
+		background: @w-text;
 		opacity: 0.9;
 		border-radius: 10.2611px;
-		padding: 25px 58px;
+		padding: 1.5625rem 3.625rem;
 		font-weight: 500;
-		font-size: 15.9618px;
-		line-height: 19px;
+		font-size: 1rem;
+		line-height: 1.1875rem;
 		text-align: center;
 		color: #9f7dfd;
-		cursor: pointer;
 	}
 }

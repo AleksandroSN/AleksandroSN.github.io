@@ -1,28 +1,32 @@
+mixin nav-menu
+    ul.nav-menu__list.nav-menu__list-footer
+                li.nav-menu__list-item 
+                    a.nav-menu__list-link(href="#top-form") Карта сайта
+                li.nav-menu__list-item 
+                    a.nav-menu__list-link(href="#top-form") Предупреждение
+                li.nav-menu__list-item 
+                    a.nav-menu__list-link(href="#top-form") Правила сайта
+                li.nav-menu__list-item 
+                    a.nav-menu__list-link(href="#top-form") Обмен
+
 footer.footer
     .wrapper.flex 
         .footer-logo
-            img(src="./img/logo.svg", alt="logo")
-            p.footer-logo__text
-                span.footer-logo__text.text-bold moneyex
-                | change            
+            a.footer-logo__inner(href="./index.html")
+                img(src="./img/logo.svg", alt="logo")
+                p.footer-logo__text
+                    span.footer-logo__text.text-bold moneyex
+                    | change            
         nav.nav-menu            
-            ul.nav-menu__list.nav-menu__list-footer
-                li.nav-menu__list-item 
-                    a.nav-menu__list-link(href="#") Карта сайта
-                li.nav-menu__list-item 
-                    a.nav-menu__list-link(href="#") Предупреждение
-                li.nav-menu__list-item 
-                    a.nav-menu__list-link(href="#") Правила сайта
-                li.nav-menu__list-item 
-                    a.nav-menu__list-link(href="#") Обмен
+            +nav-menu
         .footer-social    
             ul.footer-social__list.flex
                 li.footer-social__icons
-                    a.class(href="#")
+                    a.class(href="vk.com")
                         img.soc-1(src="./img/vk.svg", alt="vk")
                 li.footer-social__icons
-                    a.class(href="#")
+                    a.class(href="facebook.com")
                         img.soc-2(src="./img/fb.svg", alt="fb")
                 li.footer-social__icons
-                    a.class(href="#")
+                    a.class(href="instagram.com")
                         img.soc-3(src="./img/inst.svg", alt="inst")

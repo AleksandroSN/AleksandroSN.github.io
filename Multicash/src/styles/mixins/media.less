@@ -1,17 +1,3 @@
-.screen4 {
-	@media (max-width: 1605px) {
-		background-size: 550px;
-		background-position: left 306px top 76px;
-		@media (min-width: 1200px) {
-			background-size: 500px;
-			background-position: left 218px top 106px;
-		}
-	}
-	@media (max-width: 1000px) {
-		background: none;
-	}
-}
-
 @media (max-width: 1200px) {
 	.wrapper {
 		width: 90%;
@@ -36,7 +22,7 @@
 			}
 
 			&__right {
-				margin: 2rem auto;
+				margin: 2rem auto 1rem;
 			}
 		}
 	}
@@ -59,7 +45,7 @@
 		}
 	}
 
-	.space-between {
+	.spc-btw-elem {
 		justify-content: space-around;
 	}
 
@@ -68,8 +54,11 @@
 	}
 
 	.screen4 {
-		background-position: left 75px top 150px;
-		background-size: 400px;
+		&-img {
+			top: 20px;
+			height: 85%;
+			left: 20px;
+		}
 
 		&-blur-block {
 			left: 0;
@@ -89,22 +78,41 @@
 
 @media (max-width: 992px) {
 	.screen1 {
-		&-form__left,
-		&-form__middle {
-			flex: 100%;
-		}
+		&-form {
+			padding: 2rem 3rem;
 
-		&-form__img {
-			padding: 3rem;
+			&__left,
+			&__middle {
+				flex: 100%;
+			}
+
+			&__img {
+				padding: 1rem;
+			}
 		}
 	}
 
 	.screen4-banner {
 		margin: 0 auto;
 	}
+
+	.screen4-img {
+		left: auto;
+		right: 0;
+		top: 150px;
+		height: 70%;
+	}
+
+	.nav-menu__list {
+		flex-wrap: wrap;
+	}
 }
 
 @media (max-width: 768px) {
+	.wrapper {
+		width: 85%;
+	}
+
 	.screen1-top__h1 {
 		padding: 0;
 		font-size: 2.5rem;
@@ -122,33 +130,37 @@
 		margin-top: 2rem;
 		min-height: 0;
 	}
+
+	.screen4-img {
+		right: -40px;
+	}
+
+	.nav-menu__list-item {
+		padding-top: 0.5rem;
+		margin-right: 3%;
+	}
 }
 
 @media (max-width: 576px) {
-	// .wrapper {
-	// 	width: 70%;
-	// }
+	.footer-social {
+		padding: 1rem;
+		flex: 100%;
+	}
+
 	.nav-menu__list-footer {
 		flex-flow: column wrap;
 		align-items: center;
 	}
 
-	.nav-menu__list-item {
-		padding-top: 0.5rem;
-	}
-
 	.footer-logo,
 	.header-logo {
 		justify-content: center;
+		flex: 100%;
 	}
 
 	.signzone {
 		justify-content: center;
 		padding-top: 10px;
-	}
-
-	.screen1-middle {
-		margin: 3.125rem 0;
 	}
 
 	.screen1-top__h1 {
@@ -195,7 +207,7 @@
 		}
 	}
 
-	.space-between {
+	.spc-btw-elem {
 		justify-content: center;
 	}
 
@@ -225,7 +237,9 @@
 	}
 
 	.screen4 {
-		background: none;
+		&-img {
+			display: none;
+		}
 
 		&-blur-block {
 			left: 20px;
@@ -239,6 +253,12 @@
 			flex-flow: row wrap;
 
 			&__title {
+				text-align: center;
+				font-size: 1.7rem;
+			}
+
+			&__text {
+				flex: 100%;
 				text-align: center;
 			}
 		}

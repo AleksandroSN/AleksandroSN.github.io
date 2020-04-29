@@ -7,11 +7,10 @@
     <title>Multicash </title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="wrapper flex"> 
-        <div class="header-logo"><img src="./img/logo.svg" alt="logo">
-          <p class="header-logo__text"><span class="header-logo__text text-bold">moneyex</span>change            </p>
-        </div>
+        <div class="header-logo"><a class="header-logo__inner" href="#"><img src="./img/logo.svg" alt="logo">
+            <p class="header-logo__text"><span class="header-logo__text text-bold">moneyex</span>change            </p></a></div>
         <nav class="nav-menu">      
           <ul class="nav-menu__list">
             <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#">Компания</a></li>
@@ -26,6 +25,7 @@
       </div>
     </header>
     <main>
+      <div class="top-button"><a href="#header"><img src="./img/arrow-up.svg" alt="arrow-up"></a></div>
       <div class="screen1">
         <div class="wrapper flex">
           <div class="screen1-top">           
@@ -33,7 +33,7 @@
             <p class="screen1-top__p">Быстрый обмен без скрытых комиссий</p>
           </div>
           <div class="screen1-middle">
-            <form class="screen1-form" action="#" method="get">                
+            <form class="screen1-form" id="top-form" action="#" method="get">                
               <div class="screen1-form__left">
                 <p class="screen1-form__title">Вы отдаете</p>
                 <p class="screen1-form__subtitle">Сумма</p>
@@ -64,19 +64,19 @@
       <div class="screen2">
         <div class="wrapper flex align-start">
           <div class="screen2-col"><img class="screen2-col__img" src="./img/z1.png" alt="img">
-            <div class="some-class">
+            <div class="screen2-col__text">
               <h3>Безопасность</h3>
               <p>Усиленная безопасность ваших обменов, усиленная безопасность от мошенников!</p>
             </div>
           </div>
           <div class="screen2-col"><img class="screen2-col__img" src="./img/z2.png" alt="img">
-            <div class="some-class">
+            <div class="screen2-col__text">
               <h3>Реферальная система</h3>
               <p>На сервисе работает партнерская программа , за каждый обмен приведенного вами клиента, вы получаете 0.5% с нашей прибыли.</p>
             </div>
           </div>
           <div class="screen2-col"><img class="screen2-col__img" src="./img/z3.png" alt="img">
-            <div class="some-class">
+            <div class="screen2-col__text">
               <h3>Онлайн поддержка</h3>
               <p>Четыре вида поддержки для наших клиентов:  Телеграмм канал, E-mail поддержка, и мобильный номер (Viber).</p>
             </div>
@@ -84,7 +84,8 @@
           <div class="screen2-element">
             <div class="left-side">
               <h3>Сервис обмена электронных валют с 5-летней историей</h3>
-              <p>За время работы мы приобрели репутацию проверенного партнера и делаем все возможное, чтобы ваши впечатления от нашего сервиса были только благоприятными.</p>
+              <p>
+                За время работы мы приобрели репутацию проверенного партнера и делаем все возможное,чтобы ваши впечатления от нашего сервиса были только благоприятными.</p>
             </div><img class="screen2-element__img" src="./img/s2.png" alt="img">
           </div>
         </div>
@@ -93,7 +94,7 @@
         <div class="wrapper">
           <h2 class="screen3-h2">Резерв валюты</h2>
           <div class="screen3-multicash"> 
-            <ul class="screen3-list flex space-between">
+            <ul class="screen3-list flex spc-btw-elem">
               <li class="screen3-numbers"><img class="screen3-numbers__img" src="./img/cash1.png" alt="value1">
                 <h3 class="screen3-numbers__title">Yandex RUB</h3>
                 <p class="screen3-numbers__text">9000245</p>
@@ -130,28 +131,65 @@
           </div>
           <div class="screen3-comments">           
             <h2 class="screen3-comments__title">Что клиенты говорят о нас</h2>
-            <div class="screen3-comments__inner-block">
-              <p class="screen3-comments__text">
-                Киви переправил деньги не на кошелек а наномер мтс будьте внимательны.даже в этом случаи делают возврат
-                и переводят на приват.особая благодарность оператору Марии.
-              </p>
-              <p class="screen3-comments__author">Jacob Robertson</p>
-              <p class="screen3-comments__data">20.02.2020, 12:10</p>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <p class="screen3-comments__text">
+                    Киви переправил деньги не на кошелек, а на номер мтс будьте внимательны.даже в этом случаи делают возврат
+                    и переводят на приват.особая благодарность оператору Марии.
+                  </p>
+                  <p class="screen3-comments__author">Jacob Robertson</p>
+                  <p class="screen3-comments__data">20.02.2020, 12:10</p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="screen3-comments__text">
+                    3-й раз выполняю обмен. все как всегда на отлично! транзакции выполняются 
+                    в течение 15-20 мин. что очень быстро + лучший ценник!
+                  </p>
+                  <p class="screen3-comments__author">Morris Robertson</p>
+                  <p class="screen3-comments__data">17.02.2020, 18:51</p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="screen3-comments__text">
+                    3-й раз выполняю обмен. все как всегда на отлично! транзакции выполняются 
+                    в течение 15-20 мин. что очень быстро + лучший ценник!
+                  </p>
+                  <p class="screen3-comments__author">Morris Robertson</p>
+                  <p class="screen3-comments__data">17.02.2020, 18:51</p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="screen3-comments__text">
+                    3-й раз выполняю обмен. все как всегда на отлично! транзакции выполняются 
+                    в течение 15-20 мин. что очень быстро + лучший ценник!
+                  </p>
+                  <p class="screen3-comments__author">Morris Robertson</p>
+                  <p class="screen3-comments__data">17.02.2020, 18:51</p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="screen3-comments__text">
+                    3-й раз выполняю обмен. все как всегда на отлично! транзакции выполняются 
+                    в течение 15-20 мин. что очень быстро + лучший ценник!
+                  </p>
+                  <p class="screen3-comments__author">Morris Robertson</p>
+                  <p class="screen3-comments__data">17.02.2020, 18:51</p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="screen3-comments__text">
+                    3-й раз выполняю обмен. все как всегда на отлично! транзакции выполняются 
+                    в течение 15-20 мин. что очень быстро + лучший ценник!
+                  </p>
+                  <p class="screen3-comments__author">Morris Robertson</p>
+                  <p class="screen3-comments__data">17.02.2020, 18:51</p>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev">             </div>
             </div>
-            <div class="screen3-comments__inner-block">
-              <p class="screen3-comments__text">
-                3-й раз выполняю обмен. все как всегда на отлично! транзакции выполняются 
-                в течение 15-20 мин. что очень быстро + лучший ценник!
-              </p>
-              <p class="screen3-comments__author">Morris Robertson</p>
-              <p class="screen3-comments__data">17.02.2020, 18:51  </p>
-            </div>
-            <div class="screen3-arrows"><a class="screen3-arrows__left" href="#"></a><a class="screen3-arrows__right" href="#">            </a></div>
           </div>
         </div>
       </div>
       <div class="screen4">
-        <div class="wrapper z-index">
+        <div class="wrapper"><img class="screen4-img" src="./img/imgslid.png" alt="soplya">
           <div class="screen4-blur-block"></div>
           <div class="screen4-main-block">
             <div class="screen4-banner">
@@ -165,25 +203,26 @@
     </main>
     <footer class="footer">
       <div class="wrapper flex"> 
-        <div class="footer-logo"><img src="./img/logo.svg" alt="logo">
-          <p class="footer-logo__text"><span class="footer-logo__text text-bold">moneyex</span>change            </p>
-        </div>
+        <div class="footer-logo"><a class="footer-logo__inner" href="./index.html"><img src="./img/logo.svg" alt="logo">
+            <p class="footer-logo__text"><span class="footer-logo__text text-bold">moneyex</span>change            </p></a></div>
         <nav class="nav-menu">           
-          <ul class="nav-menu__list nav-menu__list-footer">
-            <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#">Карта сайта</a></li>
-            <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#">Предупреждение</a></li>
-            <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#">Правила сайта</a></li>
-            <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#">Обмен</a></li>
-          </ul>
+              <ul class="nav-menu__list nav-menu__list-footer">
+                <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#top-form">Карта сайта</a></li>
+                <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#top-form">Предупреждение</a></li>
+                <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#top-form">Правила сайта</a></li>
+                <li class="nav-menu__list-item"> <a class="nav-menu__list-link" href="#top-form">Обмен</a></li>
+              </ul>
         </nav>
         <div class="footer-social">   
           <ul class="footer-social__list flex">
-            <li class="footer-social__icons"><a class="class" href="#"><img class="soc-1" src="./img/vk.svg" alt="vk"></a></li>
-            <li class="footer-social__icons"><a class="class" href="#"><img class="soc-2" src="./img/fb.svg" alt="fb"></a></li>
-            <li class="footer-social__icons"><a class="class" href="#"><img class="soc-3" src="./img/inst.svg" alt="inst"></a></li>
+            <li class="footer-social__icons"><a class="class" href="vk.com"><img class="soc-1" src="./img/vk.svg" alt="vk"></a></li>
+            <li class="footer-social__icons"><a class="class" href="facebook.com"><img class="soc-2" src="./img/fb.svg" alt="fb"></a></li>
+            <li class="footer-social__icons"><a class="class" href="instagram.com"><img class="soc-3" src="./img/inst.svg" alt="inst"></a></li>
           </ul>
         </div>
       </div>
     </footer>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
