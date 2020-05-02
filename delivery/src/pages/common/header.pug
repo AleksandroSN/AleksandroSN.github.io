@@ -1,11 +1,14 @@
 header.header
   a.logo-home(href="./index.html")
-    img.header__logo-img(src="./img/logo.svg", alt="logo")
+    svg.header__logo-img(width='101' height='37' xmlns='http://www.w3.org/2000/svg')
+      use(xlink:href='./img/sprite.svg#logo')
   input.header__input.input(type="text" name="sametext" placeholder="Адрес доставки")
   .buttons
     button.button.button-primary
-      img.button-img(src="./img/profile.svg", alt="profile")
+      svg.button-img(width='12' height='14' xmlns='http://www.w3.org/2000/svg')
+        use(xlink:href='./img/sprite.svg#profile')
       span.button-text Войти
     button#cart-button.button.button-shopping
-      img.button-img(src="./img/shopping.svg", alt="cart")
+      svg.button-img(width='15' height='13' xmlns='http://www.w3.org/2000/svg')
+        use(xlink:href='./img/sprite.svg#shopping')
       span.button-text Корзина           

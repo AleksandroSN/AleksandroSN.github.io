@@ -1,6 +1,7 @@
 footer.footer
     a.logo-home(href="./index.html")
-        img.footer__logo-img(src="./img/logo.svg", alt="logo")
+        svg.footer__logo-img(width='101' height='37' xmlns='http://www.w3.org/2000/svg')
+            use(xlink:href='./img/sprite.svg#logo')
     ul.footer-list
         li.list
             a.list-class(href="#") Ресторанам
@@ -13,10 +14,12 @@ footer.footer
     ul.footer__social
         li.social-icons
             a(href='#')
-                img.soc-1(src='./img/inst.svg' alt='instagram')
+                img(src="./img/inst.svg", alt="inst")
         li.social-icons
             a(href='#')
-                img.soc-2(src='./img/fb.svg' alt='fb')
+                svg.soc-2(width='26' height='26' xmlns='http://www.w3.org/2000/svg')
+                    use(xlink:href='./img/sprite.svg#fb')
         li.social-icons
             a(href='#')
-                img.soc-3(src='./img/vk.svg' alt='vk')      
+                svg.soc-3(width='36' height='21' xmlns='http://www.w3.org/2000/svg')
+                    use(xlink:href='./img/sprite.svg#vk')      

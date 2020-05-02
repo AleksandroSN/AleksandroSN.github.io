@@ -1,18 +1,19 @@
-const gulp = require("gulp");
+const gulp = require('gulp');
 
-const server = require("./gulp/server");
-const style = require("./gulp/style");
-const pug2html = require("./gulp/pug2html");
-const imgmin = require("./gulp/imgmin");
-const copyjs = require("./gulp/copyjs");
-const copyimg = require("./gulp/copyimg");
-const copycss = require("./gulp/copycss");
-const convwebp = require("./gulp/convwebp");
-const clean = require("./gulp/clean");
-const w3cvalidator = require("./gulp/w3cvalidator");
+const server = require('./gulp/server');
+const style = require('./gulp/style');
+const pug2html = require('./gulp/pug2html');
+const imgmin = require('./gulp/imgmin');
+const copyjs = require('./gulp/copyjs');
+const copyimg = require('./gulp/copyimg');
+const copycss = require('./gulp/copycss');
+const copyfonts = require('./gulp/copyfonts');
+const convwebp = require('./gulp/convwebp');
+const svgsprite = require('./gulp/svgsprite');
+const clean = require('./gulp/clean');
+const w3cvalidator = require('./gulp/w3cvalidator');
 
-const dev = gulp.parallel(style, pug2html, copyjs, copyimg, copycss);
-
+const dev = gulp.parallel(style, pug2html, copyjs, copycss, copyfonts, svgsprite, imgmin);
 const build = gulp.series(clean, dev);
 
 module.exports.start = gulp.series(build, server);
@@ -25,3 +26,5 @@ module.exports.copycss = copycss;
 module.exports.clean = clean;
 module.exports.pug2html = pug2html;
 module.exports.w3cvalidator = w3cvalidator;
+module.exports.svgsprite = svgsprite;
+module.exports.copyfonts = copyfonts;

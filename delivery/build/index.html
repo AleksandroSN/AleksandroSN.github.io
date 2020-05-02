@@ -6,16 +6,26 @@
     <link rel="stylesheet" href="./css/style.min.css"/>
     <link rel="stylesheet" href="./css/normalize.css"/>
     <link rel="stylesheet" href="./css/animate.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"/>
     <title>Delivery</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header"><a class="logo-home" href="./index.html"><img class="header__logo-img" src="./img/logo.svg" alt="logo"/></a>
+      <header class="header"><a class="logo-home" href="./index.html">
+          <svg class="header__logo-img" width="101" height="37" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="./img/sprite.svg#logo"></use>
+          </svg></a>
         <input class="header__input input" type="text" name="sametext" placeholder="Адрес доставки"/>
         <div class="buttons">
-          <button class="button button-primary"><img class="button-img" src="./img/profile.svg" alt="profile"/><span class="button-text">Войти</span></button>
-          <button class="button button-shopping" id="cart-button"><img class="button-img" src="./img/shopping.svg" alt="cart"/><span class="button-text">Корзина           </span></button>
+          <button class="button button-primary">
+            <svg class="button-img" width="12" height="14" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/sprite.svg#profile"></use>
+            </svg><span class="button-text">Войти</span>
+          </button>
+          <button class="button button-shopping" id="cart-button">
+            <svg class="button-img" width="15" height="13" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/sprite.svg#shopping"></use>
+            </svg><span class="button-text">Корзина           </span>
+          </button>
         </div>
       </header>
       <main class="main">
@@ -38,7 +48,11 @@
                 <h3 class="cards-title">Пицца плюс</h3><span class="cards-tag tag">50 мин</span>
               </div>
               <div class="cards-info">
-                <div class="cards-info__rating"><img class="restaraunts-rating" src="./img/rating.svg" alt=""/>4.5</div>
+                <div class="cards-info__rating">
+                  <svg class="icon icon-rating" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <use xlink:href="./img/sprite.svg#rating"></use>
+                  </svg>4.5
+                </div>
                 <div class="cards-info__price">от 900 ₽</div>
                 <div class="cards-info__category">Пицца</div>
               </div>
@@ -49,7 +63,11 @@
                 <h3 class="cards-title">Тануки</h3><span class="cards-tag tag">50 мин</span>
               </div>
               <div class="cards-info">
-                <div class="cards-info__rating"><img class="restaraunts-rating" src="./img/rating.svg" alt=""/>4.5</div>
+                <div class="cards-info__rating">
+                  <svg class="icon icon-rating" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <use xlink:href="./img/sprite.svg#rating"></use>
+                  </svg>4.5
+                </div>
                 <div class="cards-info__price">от 500 ₽</div>
                 <div class="cards-info__category">Суши</div>
               </div>
@@ -60,7 +78,11 @@
                 <h3 class="cards-title">FoodBand</h3><span class="cards-tag tag">50 мин</span>
               </div>
               <div class="cards-info">
-                <div class="cards-info__rating"><img class="restaraunts-rating" src="./img/rating.svg" alt=""/>4.5</div>
+                <div class="cards-info__rating">
+                  <svg class="icon icon-rating" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <use xlink:href="./img/sprite.svg#rating"></use>
+                  </svg>4.5
+                </div>
                 <div class="cards-info__price">от 1900 ₽</div>
                 <div class="cards-info__category">Всякое</div>
               </div>
@@ -71,7 +93,11 @@
                 <h3 class="cards-title">Пицца-жадина</h3><span class="cards-tag tag">50 мин</span>
               </div>
               <div class="cards-info">
-                <div class="cards-info__rating"><img class="restaraunts-rating" src="./img/rating.svg" alt=""/>4.5</div>
+                <div class="cards-info__rating">
+                  <svg class="icon icon-rating" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <use xlink:href="./img/sprite.svg#rating"></use>
+                  </svg>4.5
+                </div>
                 <div class="cards-info__price">от 2000 ₽</div>
                 <div class="cards-info__category">Пицца</div>
               </div>
@@ -82,7 +108,11 @@
                 <h3 class="cards-title">Точка еды</h3><span class="cards-tag tag">50 мин</span>
               </div>
               <div class="cards-info">
-                <div class="cards-info__rating"><img class="restaraunts-rating" src="./img/rating.svg" alt=""/>4.5</div>
+                <div class="cards-info__rating">
+                  <svg class="icon icon-rating" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <use xlink:href="./img/sprite.svg#rating"></use>
+                  </svg>4.5
+                </div>
                 <div class="cards-info__price">от 800 ₽</div>
                 <div class="cards-info__category">Вкусная еда</div>
               </div>
@@ -93,13 +123,20 @@
                 <h3 class="cards-title">PizzaBurger</h3><span class="cards-tag tag">50 мин</span>
               </div>
               <div class="cards-info">
-                <div class="cards-info__rating"><img class="restaraunts-rating" src="./img/rating.svg" alt=""/>4.5</div>
+                <div class="cards-info__rating">
+                  <svg class="icon icon-rating" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <use xlink:href="./img/sprite.svg#rating"></use>
+                  </svg>4.5
+                </div>
                 <div class="cards-info__price">от 100 ₽</div>
                 <div class="cards-info__category">Пицца и бургер</div>
               </div>
             </div></a></section>
       </main>
-      <footer class="footer"><a class="logo-home" href="./index.html"><img class="footer__logo-img" src="./img/logo.svg" alt="logo"/></a>
+      <footer class="footer"><a class="logo-home" href="./index.html">
+          <svg class="footer__logo-img" width="101" height="37" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="./img/sprite.svg#logo"></use>
+          </svg></a>
         <ul class="footer-list">
           <li class="list"><a class="list-class" href="#">Ресторанам</a></li>
           <li class="list"><a class="list-class" href="#">Курьерам</a></li>
@@ -107,9 +144,15 @@
           <li class="list"><a class="list-class" href="#">Контакты</a></li>
         </ul>
         <ul class="footer__social">
-          <li class="social-icons"><a href="#"><img class="soc-1" src="./img/inst.svg" alt="instagram"/></a></li>
-          <li class="social-icons"><a href="#"><img class="soc-2" src="./img/fb.svg" alt="fb"/></a></li>
-          <li class="social-icons"><a href="#"><img class="soc-3" src="./img/vk.svg" alt="vk"/></a></li>
+          <li class="social-icons"><a href="#"><img src="./img/inst.svg" alt="inst"/></a></li>
+          <li class="social-icons"><a href="#">
+              <svg class="soc-2" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#fb"></use>
+              </svg></a></li>
+          <li class="social-icons"><a href="#">
+              <svg class="soc-3" width="36" height="21" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./img/sprite.svg#vk">     </use>
+              </svg></a></li>
         </ul>
       </footer>
       <div class="modal">
@@ -119,41 +162,41 @@
             <button class="close">&times;</button>
           </div>
           <div class="modal-body">
-            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 р</strong>
+            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 ₽</strong>
               <div class="food-counter">
                 <button class="counter-button">-</button><span class="counter">1</span>
                 <button class="counter-button">+</button>
               </div>
             </div>
-            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 р</strong>
+            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 ₽</strong>
               <div class="food-counter">
                 <button class="counter-button">-</button><span class="counter">1</span>
                 <button class="counter-button">+</button>
               </div>
             </div>
-            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 р</strong>
+            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 ₽</strong>
               <div class="food-counter">
                 <button class="counter-button">-</button><span class="counter">1</span>
                 <button class="counter-button">+</button>
               </div>
             </div>
-            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 р</strong>
+            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 ₽</strong>
               <div class="food-counter">
                 <button class="counter-button">-</button><span class="counter">1</span>
                 <button class="counter-button">+</button>
               </div>
             </div>
-            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 р</strong>
+            <div class="food-row"><span class="food-name">Ролл угорь стандарт</span><strong class="food-price">250 ₽</strong>
               <div class="food-counter">
                 <button class="counter-button">-</button><span class="counter">1</span>
                 <button class="counter-button">+</button>
               </div>
             </div>
           </div>
-          <div class="modal-footer"><span class="price-tag">1250 P</span>
+          <div class="modal-footer"><span class="price-tag">1250 ₽</span>
             <div class="footer-buttons">
-              <button class="button button-signin">Оформить заказ</button>
-              <button class="button">Отмена</button>
+              <button class="button button-confirm">Оформить заказ</button>
+              <button class="button button-cancel">Отмена</button>
             </div>
           </div>
         </div>
