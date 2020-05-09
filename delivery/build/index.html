@@ -15,8 +15,8 @@
             <use xlink:href="./img/sprite.svg#logo"></use>
           </svg></a>
         <input class="header__input input" type="text" name="sametext" placeholder="Адрес доставки"/>
-        <div class="buttons">
-          <button class="button button-primary">
+        <div class="buttons"><span class="user-name"></span>
+          <button class="button button-primary" id="button-auth">
             <svg class="button-img" width="12" height="14" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="./img/sprite.svg#profile"></use>
             </svg><span class="button-text">Войти</span>
@@ -24,15 +24,55 @@
           <button class="button button-shopping" id="cart-button">
             <svg class="button-img" width="15" height="13" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="./img/sprite.svg#shopping"></use>
-            </svg><span class="button-text">Корзина           </span>
+            </svg><span class="button-text">Корзина  </span>
+          </button>
+          <button class="button button-out button-primary">
+            <svg class="button-img" width="12" height="14" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/sprite.svg#profile"></use>
+            </svg><span class="button-text">Выйти         </span>
           </button>
         </div>
       </header>
       <main class="main">
         <section class="promo">
-          <div class="promo-inner">
-            <h1 class="promo-title">Онлайн-сервис<br/>доставки еды на дом</h1>
-            <p class="promo-text">Блюда из любимого ресторана привезет курьер в перчатках, маски и с антисептиком</p>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <section class="promo-inner pizza">
+                  <h2 class="promo-title">Онлайн-сервис<br/>доставки еды на дом</h2>
+                  <p class="promo-text">
+                    Блюда из любимого ресторана привезет курьер в перчатках,
+                    маске и с антисептиком
+                  </p>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="promo-inner kebab">
+                  <h2 class="promo-title">Шашлыки на майские <br/>со скидкой 35%</h2>
+                  <p class="promo-text">
+                    Закажите шашлыки в любом ресторане до 10 мая и получите
+                    скидку по промокоду OMAGAD
+                  </p>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="promo-inner vegetables">
+                  <h2 class="promo-title">Скидка 20% на всю еду<br/>по промокоду LOVE.JS</h2>
+                  <p class="promo-text">
+                    Блюдо из ресторана привезут вместе с двумя подарочными
+                    книгами по фронтенду
+                  </p>
+                </section>
+              </div>
+              <div class="swiper-slide">
+                <section class="promo-inner sushi">
+                  <h2 class="promo-title">Сеты со скидкой до 30%<br/>в ресторанах</h2>
+                  <p class="promo-text">Скидки на сеты до 30 мая по промокоду DADADA</p>
+                </section>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </section>
         <section class="restaraunts">
@@ -155,7 +195,7 @@
               </svg></a></li>
         </ul>
       </footer>
-      <div class="modal">
+      <div class="modal-cart">
         <div class="modal-dialog">
           <div class="modal-head">
             <h3 class="modal-title">Корзина</h3>
@@ -201,7 +241,32 @@
           </div>
         </div>
       </div>
+      <div class="modal-auth">
+        <div class="modal-dialog modal-dialog-auth">
+          <button class="close-auth">&times;</button>
+          <form id="logInForm">
+            <fieldset class="modal-body modal-body--auth">
+              <legend class="modal-title">&Acy;&vcy;&tcy;&ocy;&rcy;&icy;&zcy;&acy;&tscy;&icy;&yacy;</legend>
+              <label class="label-auth"><span>&Lcy;&ocy;&gcy;&icy;&ncy;</span>
+                <input id="login" type="text"/>
+              </label>
+              <label class="label-auth"><span>&Pcy;&acy;&rcy;&ocy;&lcy;&softcy;</span>
+                <input id="password" type="password"/>
+              </label>
+            </fieldset>
+            <!-- /.modal-body-->
+            <div class="modal-footer">
+              <div class="footer-buttons">
+                <button class="button button-primary button-login" type="submit">&Vcy;&ocy;&jcy;&tcy;&icy;</button>
+              </div>
+            </div>
+          </form>
+          <!-- /.modal-footer-->
+        </div>
+        <!-- /.modal-dialog-->
+      </div>
     </div>
+    <script src="./js/swiper.min.js">       </script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

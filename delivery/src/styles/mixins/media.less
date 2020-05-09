@@ -1,191 +1,245 @@
 @media screen and (max-width: 1366px) {
-	.wrapper {
-		max-width: 960px;
-	}
-	.promo-inner {
-		background-position: top 30px right -200px;
-		background-size: 750px;
-	}
+  .wrapper {
+    max-width: 960px;
+  }
+  .promo-inner {
+    &.pizza {
+      background: #fff1b8 url("../img/pizza.png") no-repeat top -100px right -250px;
+      background-size: 750px;
+    }
 
-	.cards-info__rating {
-		margin-right: 10px;
-		flex: 1 1 100%;
-		order: 3;
-	}
+    &.kebab {
+      background: #d6e4ff url("../img/kebab.png") no-repeat top 45px right 40px;
+      background-size: 400px;
+    }
 
-	.restaraunts-head__search {
-		flex: 0.4;
-	}
+    &.vegetables {
+      background: #fff566 url("../img/vegetables.png") no-repeat top 0 right 0;
+      background-size: 720px;
+    }
+
+    &.sushi {
+      background: #fff1f0 url("../img/sushi.png") no-repeat top 10px right 15px;
+      background-size: 440px;
+    }
+  }
+
+  .cards-info__rating {
+    margin-right: 10px;
+    flex: 1 1 100%;
+    order: 3;
+  }
+
+  .restaraunts-head__search {
+    flex: 0.4;
+  }
 }
 
 @media screen and (max-width: 992px) {
-	.wrapper {
-		max-width: 750px;
-	}
+  .wrapper {
+    max-width: 750px;
+  }
 
-	.promo {
-		padding: 50px;
+  .promo {
+    padding: 50px;
 
-		&-inner {
-			background-size: 500px;
-			background-position: bottom 100px left 300px;
-			padding: 4rem 2rem;
-		}
+    &-inner {
+      padding: 4rem 2rem;
+      &.pizza {
+        background: #fff1b8 url("../img/pizza.png") no-repeat top -100px right -250px;
+        background-size: 500px;
+      }
 
-		&-text {
-			font-size: 1.125rem;
-			max-width: 400px;
-		}
-	}
+      &.kebab {
+        background: #d6e4ff url("../img/kebab.png") no-repeat top 45px right
+          40px;
+        background-size: 450px;
+      }
 
-	.cards-inner {
-		flex-basis: 49%;
-	}
+      &.vegetables {
+        background: #fff566 url("../img/vegetables.png") no-repeat top 0 right 0;
+        background-size: 500px;
+      }
 
-	.footer-list {
-		font-size: 1rem;
-	}
+      &.sushi {
+        background: #fff1f0 url("../img/sushi.png") no-repeat top 10px right
+          15px;
+        background-size: 500px;
+      }
+    }
+
+    &-text {
+      font-size: 1.125rem;
+      max-width: 400px;
+    }
+  }
+
+  .cards-inner {
+    flex-basis: 49%;
+  }
+
+  .footer-list {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-	.wrapper {
-		max-width: 700px;
-	}
+  .wrapper {
+    max-width: 700px;
+  }
 
-	.promo {
-		padding: 50px 0;
+  .promo {
+    padding: 50px 0;
 
-		&-inner {
-			background-position: top -25px right -205px;
-			background-size: 500px;
-		}
+    &-inner {
+      text-align: center;
 
-		&-title {
-			font-size: 1.5rem;
-			line-height: 1.4;
-		}
-	}
+      &.pizza {
+        background: #fff1b8;
+        background-size: 500px;
+      }
 
-	.restaraunts-head__search {
-		flex: 1;
-		margin-top: 10px;
-	}
+      &.kebab {
+        background: #d6e4ff;
+        background-size: 450px;
+      }
 
-	.footer {
-		justify-content: space-between;
+      &.vegetables {
+        background: #fff566;
+        background-size: 500px;
+      }
 
-		.logo-home {
-			order: 1;
-		}
+      &.sushi {
+        background: #fff1f0;
+        background-size: 500px;
+      }
+    }
 
-		&__social {
-			order: 2;
-			margin-left: 0;
-		}
+    &-title {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+  }
 
-		&-list {
-			flex-flow: column wrap;
-		}
-	}
+  .restaraunts-head__search {
+    flex: 1;
+    margin-top: 10px;
+  }
 
-	.cards-title {
-		font-size: 1.125rem;
-	}
+  .footer {
+    justify-content: space-between;
+
+    .logo-home {
+      order: 1;
+    }
+
+    &__social {
+      order: 2;
+      margin-left: 0;
+    }
+
+    &-list {
+      flex-flow: column wrap;
+    }
+  }
+
+  .cards-title {
+    font-size: 1.125rem;
+  }
 }
 
 @media screen and (max-width: 578px) {
-	.wrapper {
-		width: 90%;
-	}
+  .wrapper {
+    width: 90%;
+  }
 
-	.button-text {
-		display: none;
-	}
+  .button-text {
+    display: none;
+  }
 
-	.header {
-		flex-wrap: wrap;
+  .header {
+    flex-wrap: wrap;
 
-		.logo-home {
-			order: 1;
-		}
+    .logo-home {
+      order: 1;
+    }
 
-		&__input {
-			order: 3;
-			flex: 100%;
-			margin-top: 10px;
-		}
-	}
+    &__input {
+      order: 3;
+      flex: 100%;
+      margin-top: 10px;
+    }
+  }
 
-	.buttons {
-		order: 2;
-	}
+  .buttons {
+    order: 2;
+  }
 
-	.promo {
-		padding: 0;
+  .promo {
+    padding: 0;
 
-		&-inner {
-			background: #fff1b8;
-			padding: 68px 10px;
-		}
-	}
+    &-inner {
+      padding: 68px 10px;
+    }
+  }
 
-	.cards-inner {
-		flex: 1 1 100%;
-	}
+  .cards-inner {
+    flex: 1 1 100%;
+  }
 
-	.footer__social {
-		flex: 1 1 100%;
-		display: flex;
-		justify-content: center;
-		order: 3;
-		padding: 5px 0;
-	}
+  .footer__social {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    order: 3;
+    padding: 5px 0;
+  }
 
-	.footer-list {
-		flex: 1 1 100%;
-		order: 2;
-		padding: 5px 0;
-	}
+  .footer-list {
+    flex: 1 1 100%;
+    order: 2;
+    padding: 5px 0;
+  }
 
-	.footer .logo-home {
-		flex: 1 1 100%;
-		display: flex;
-		justify-content: center;
-		order: 1;
-		padding: 5px 0;
-	}
+  .footer .logo-home {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    order: 1;
+    padding: 5px 0;
+  }
 
-	.food-name {
-		order: 1;
-		font-size: 1rem;
-	}
+  .food-name {
+    order: 1;
+    font-size: 1rem;
+  }
 
-	.food-counter {
-		order: 2;
-		margin-left: 5px;
-	}
-	.food-price {
-		margin: 0;
-		order: 3;
-	}
+  .food-counter {
+    order: 2;
+    margin-left: 5px;
+  }
+  .food-price {
+    margin: 0;
+    order: 3;
+  }
 
-	.modal-footer {
-		justify-content: center;
-	}
+  .modal-footer {
+    justify-content: center;
+  }
 
-	.footer-buttons {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		flex: 100%;
-	}
+  .footer-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 100%;
+  }
 
-	.button-confirm,
-	.button-cancel {
-		margin-top: 10px;
-	}
+  .button-confirm,
+  .button-cancel {
+    margin-top: 10px;
+  }
 
-	.modal-body {
-		margin-bottom: 20px;
-	}
+  .modal-body {
+    margin-bottom: 20px;
+  }
 }
