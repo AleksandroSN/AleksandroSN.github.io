@@ -11,50 +11,6 @@ const selectMarka = document.querySelector(".screen2-select-marka");
 const catalogInner = document.querySelector(".catalog-inner");
 const cardFooterMore = document.querySelectorAll(".card-footer__more");
 const cardFooterQuestion = document.querySelectorAll(".card-footer__question");
-const cards = document.querySelectorAll(".card");
-const titleModel = document.querySelectorAll(".title-model");
-const titleMarka = document.querySelectorAll(".title-marka");
-const descriptionYear = document.querySelectorAll(".description-year");
-const price = document.querySelectorAll(".card-body__price");
-const arrayPrice = new Object();
-
-function textFilter(currentBtn, currentTitle) {
-  const selectOption = currentBtn.querySelectorAll(".screen2-select__option");
-  const textBold = currentBtn.querySelectorAll(".option--text-bold");
-  const currentText = currentBtn.querySelector(".button-text--bold");
-
-  for (let i = 0; i < selectOption.length; i++) {
-    let current = selectOption[i];
-    let text = textBold[i].innerText;
-    current.addEventListener("click", function (event) {
-      event.preventDefault();
-      currentText.innerText = text;
-      for (let i = 0; i < currentTitle.length; i++) {
-        if (current.className.match(".all")) {
-          cards[i].style.display = "flex";
-        } else if (currentTitle[i].textContent.match(currentText.innerText)) {
-          cards[i].style.display = "flex";
-        } else {
-          cards[i].style.display = "none";
-        }
-      }
-    });
-  }
-}
-
-function compareDecrease(a, b) {
-  a = parseInt(a);
-  b = parseInt(b);
-  if (a > b) return 1;
-  if (a < b) return -1;
-}
-
-function compareIncrease(a, b) {
-  a = parseInt(a);
-  b = parseInt(b);
-  if (a < b) return 1;
-  if (a > b) return -1;
-}
 
 function showFilters() {
   buttonModel.classList.toggle("active-flex");
@@ -82,36 +38,6 @@ function showPrice() {
         current.addEventListener("click", function (event) {
           event.preventDefault();
           currentText.innerText = text;
-          // Ищем цену в карточках и помещаем (цену, карточку, индекс) в массив
-          cards.forEach(function (item, indx) {
-            let currentPrice = Number(
-              item
-                .querySelector(".card-body__price")
-                .textContent.replace(/\D+/g, "")
-            );
-            arrayPrice[currentPrice] = { element: item, index: indx };
-            // преобразовываем объект в массив
-            let sortElements = Object.keys(arrayPrice);
-            if (current.className.match(".cheapest"))
-              sortElements.sort(compareDecrease);
-            sortElements.map(function (key, indx) {
-              catalogInner.insertAdjacentElement(
-                "beforeend",
-                arrayPrice[key]["element"]
-              );
-              arrayPrice[key]["index"] = indx;
-            });
-            if (current.className.match(".expensive")) {
-              sortElements.sort(compareIncrease);
-              sortElements.map(function (key, indx) {
-                catalogInner.insertAdjacentElement(
-                  "beforeend",
-                  arrayPrice[key]["element"]
-                );
-                arrayPrice[key]["index"] = indx;
-              });
-            }
-          });
         });
       }
     }
@@ -130,7 +56,17 @@ function showModel() {
 
   function selectCurrent() {
     if (selectOption) {
-      textFilter(buttonModel, titleModel);
+      let textBold = buttonModel.querySelectorAll(".option--text-bold");
+      let currentText = buttonModel.querySelector(".button-text--bold");
+
+      for (let i = 0; i < selectOption.length; i++) {
+        let current = selectOption[i];
+        let text = textBold[i].innerText;
+        current.addEventListener("click", function (event) {
+          event.preventDefault();
+          currentText.innerText = text;
+        });
+      }
     }
   }
 
@@ -147,13 +83,22 @@ function showMarka() {
 
   function selectCurrent() {
     if (selectOption) {
-      textFilter(buttonMarka, titleMarka);
+      let textBold = buttonMarka.querySelectorAll(".option--text-bold");
+      let currentText = buttonMarka.querySelector(".button-text--bold");
+
+      for (let i = 0; i < selectOption.length; i++) {
+        let current = selectOption[i];
+        let text = textBold[i].innerText;
+        current.addEventListener("click", function (event) {
+          event.preventDefault();
+          currentText.innerText = text;
+        });
+      }
     }
   }
 
   selectCurrent();
 }
-
 function showYear() {
   selectYear.classList.toggle("active");
   buttonYear.classList.toggle("right-angle");
@@ -169,23 +114,10 @@ function showYear() {
       let currentText = buttonYear.querySelector(".button-text--bold");
       for (let i = 0; i < selectOption.length; i++) {
         let current = selectOption[i];
-        let text = textBold[i].textContent;
+        let text = textBold[i].innerText;
         current.addEventListener("click", function (event) {
           event.preventDefault();
-          currentText.textContent = text;
-          let splitText = text.split("-");
-          for (let i = 0; i < descriptionYear.length; i++) {
-            let currentYear = Number(
-              descriptionYear[i].textContent.replace(/\D+/g, "")
-            );
-            if (current.className.match(".all"))
-              cards[i].style.display = "flex";
-            else if (currentYear > splitText[0] && currentYear < splitText[1]) {
-              cards[i].style.display = "flex";
-            } else {
-              cards[i].style.display = "none";
-            }
-          }
+          currentText.innerText = text;
         });
       }
     }
@@ -245,3 +177,7 @@ buttonMarka.addEventListener("click", showMarka);
 buttonModel.addEventListener("click", showModel);
 buttonYear.addEventListener("click", showYear);
 buttonPrice.addEventListener("click", showPrice);
+
+// let filterYear = function() {
+//   let currentOption = buttonYear.querySelectorAll('.screen2-select__option');
+// }
