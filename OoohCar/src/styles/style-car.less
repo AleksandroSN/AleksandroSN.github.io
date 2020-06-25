@@ -1,0 +1,146 @@
+@import "./mixins/mixin";
+@import "./includes/modal";
+@import "./screens/contacts/telephone";
+
+.icon-phone {
+  display: none;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  &__text {
+    margin-left: 10px;
+  }
+}
+
+.head-title {
+  .font(900,1.75rem,1.95rem);
+}
+
+.slider {
+  position: relative;
+}
+
+.car-detail {
+  padding-top: 4.6rem;
+  .font(400,0.9rem,1.3rem);
+
+  &__head {
+    margin-top: 0.9rem;
+  }
+  &__item {
+    padding: 1rem 0;
+    line-height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #d5d5d5;
+    &:last-child {
+      border-bottom: 1px solid #d5d5d5;
+    }
+    &-name {
+      color: @grey;
+    }
+  }
+  &__footer {
+    padding-bottom: 40px;
+  }
+}
+
+.telephone-inner {
+  padding-bottom: 2.5rem;
+}
+
+.telephone-block {
+  margin-bottom: 5px;
+
+  &__number {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon-phone {
+    display: block;
+    margin: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .car-detail__card {
+    max-width: 620px;
+    margin-right: 40px;
+  }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 84%;
+  width: 8px;
+  outline: none;
+
+  &:after {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+.gallery-top {
+  width: 347px;
+  height: 185px;
+}
+.gallery-thumbs {
+  height: 83px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-bottom: 40px;
+  width: 80%;
+}
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  .gallery-top {
+    height: 303px;
+    width: 568px;
+  }
+
+  .gallery-thumbs {
+    width: 95%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 90%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gallery-thumbs {
+    width: 85%;
+  }
+}

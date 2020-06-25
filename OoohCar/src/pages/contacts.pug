@@ -1,0 +1,12 @@
+extends ./common/layout
+block links     
+        link(rel="stylesheet",href="css/style.min.css")
+        link(rel="stylesheet",href="css/style-contacts.min.css")
+block content
+    include ./screens/screen1-contacts
+    include ./screens/telephone
+    include ./screens/map
+    //- section.map
+    //-     h2.hidden Карта
+    include ./includes/modals/contacts-modal
+    

@@ -1,0 +1,16 @@
+extends ./common/layout
+block links       
+        link(rel="stylesheet",href="css/style.min.css")
+        link(rel="stylesheet",href="css/style-realisation.min.css")
+block content
+    include ./screens/screen1-realisation
+    include ./screens/offers
+    include ./includes/modals/realisation-modal
+block scripts
+    script(src="js/filepond.min.js")
+    script(src="js/filepond-plugin-image-exif-orientation.min.js")
+    script(src="js/filepond-plugin-image-crop.min.js")
+    script(src="js/filepond-plugin-image-preview.min.js")
+    script(src="js/filepond-plugin-file-validate-type.min.js")
+    script(src="js/upload.js")
+    

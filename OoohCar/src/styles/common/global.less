@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: @dark;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  // max-width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  padding: 1.25rem 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+button {
+  border-width: 0;
+  background: transparent;
+}
+
+input::placeholder {
+  .font(400,0.9rem,1rem);
+  color: @dark;
+  padding-left: 1.25rem;
+}

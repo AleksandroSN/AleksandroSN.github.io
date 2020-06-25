@@ -1,0 +1,48 @@
+.screen2 {
+  &-select {
+    box-shadow: 0 0 0 2px @green;
+  }
+}
+
+.screen2-select__option {
+  &:not(:last-child) {
+    border-bottom: 2px solid @green;
+  }
+
+  &:hover {
+    background: @green;
+  }
+}
+
+.button-year,
+.button-marka,
+.button-model {
+  box-shadow: 0 0 0 2px @green;
+}
+
+.button-filter,
+.button-year,
+.button-marka,
+.button-model {
+  background: @green;
+}
+
+@media (min-width: 1440px) {
+  .button-price {
+    background: @green;
+    box-shadow: 0 0 0 2px @green;
+    &:focus {
+      background: @white;
+      box-shadow: 0 0 0 2px @green;
+      outline: none;
+    }
+  }
+
+  .screen2 {
+    &-select {
+      &-price {
+        top: 49%;
+      }
+    }
+  }
+}

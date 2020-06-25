@@ -1,0 +1,55 @@
+section.screen2
+    .wrapper
+        h2.hidden Фильтры
+        .screen2-filters
+            button.button.button-filter
+                +icon('filter-slide','24','24')
+                span.filter-text Фильтры
+                span.count 1
+            div(tabindex='0').button.button-year 
+                span.button-text Год выпуска 
+                    span.button-text.button-text--bold любой
+                +icon('arrow-down','11','22')
+                ul.screen2-select.screen2-select-year
+                        li.screen2-select__option.all Год выпуска 
+                                span.option.option--text-bold любой
+                        li.screen2-select__option.year-2010 Год выпуска  
+                                span.option.option--text-bold 2010-2020
+                        li.screen2-select__option.year-2000 Год выпуска  
+                                span.option.option--text-bold 2000-2010 
+            div(tabindex='0').button.button-marka 
+                span.button-text Марка
+                    span.button-text.button-text--bold любая
+                +icon('arrow-down','11','22')
+                ul.screen2-select.screen2-select-marka
+                        li.screen2-select__option.all Марка 
+                                span.option.option--text-bold Любая
+                        li.screen2-select__option.marka-toyota Марка 
+                                span.option.option--text-bold Toyota
+                        li.screen2-select__option.marka-mitsubishi Марка 
+                                span.option.option--text-bold Mitsubishi               
+            div(tabindex='0').button.button-model 
+                span.button-text Модель
+                    span.button-text.button-text--bold любая
+                +icon('arrow-down','11','22')
+                ul.screen2-select.screen2-select-model
+                        li.screen2-select__option.all Модель 
+                                span.option.option--text-bold Любая
+                        li.screen2-select__option.model-mitsubishi Модель 
+                                span.option.option--text-bold Outlander Sport 
+                        li.screen2-select__option.model-toyota Модель 
+                                span.option.option--text-bold C-VR             
+            div(tabindex='0').button.button-price 
+                span.button-text Сначала
+                    span.button-text.button-text--bold  дешевые
+                +icon('arrow-down','11','22')
+                ul.screen2-select.screen2-select-price
+                        li.screen2-select__option.cheapest Сначала 
+                                span.option.option--text-bold дешевые 
+                        li.screen2-select__option.expensive Сначала 
+                                span.option.option--text-bold дорогие  
+                        li.screen2-select__option.popular Сначала 
+                                span.option.option--text-bold популярные 
+            p.screen2-find Найдено 
+                span.screen2-find-count 254
+              

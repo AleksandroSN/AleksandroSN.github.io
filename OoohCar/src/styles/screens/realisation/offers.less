@@ -1,0 +1,57 @@
+.offers {
+  position: relative;
+  bottom: 25px;
+  padding-bottom: 7.5rem;
+
+  &-inner {
+    .flex(center);
+    .flex-flow(row);
+  }
+}
+.offer1,
+.offer2 {
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+  border-radius: @br-15;
+  width: 335px;
+  .flex(center);
+  .flex-flow(row);
+}
+.offer-text {
+  .font(900,1.1rem,1.4rem);
+  text-align: center;
+  padding: 0 21px;
+}
+
+.offer1 {
+  background: url(../img/Map.jpg) no-repeat center center;
+  margin-bottom: 20px;
+}
+
+.offer2 {
+  background: #ffffff;
+}
+
+.offer1 .offer-text {
+  padding-top: 60px;
+  padding-bottom: 57px;
+}
+
+.offer2 .offer-text {
+  padding-top: 5px;
+  padding-bottom: 52px;
+}
+
+.icon-camera {
+  padding-top: 38px;
+}
+
+@media (min-width: 768px) {
+  .offer1,
+  .offer2:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .offer1 {
+    margin-bottom: 0;
+  }
+}

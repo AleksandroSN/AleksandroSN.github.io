@@ -1,0 +1,247 @@
+.card-modal {
+  position: relative;
+  bottom: 55px;
+  background: @green;
+  align-items: center;
+  display: none;
+  .flex-flow(column);
+  padding: 1.5rem 1.25rem 1.25rem;
+  margin: 0 -1.25rem;
+  &--yellow {
+    background: @yellow !important;
+  }
+  &--blue {
+    background: @blue !important;
+  }
+
+  &--white {
+    background: @white !important;
+  }
+
+  &--rel {
+    margin: 0;
+    bottom: 0;
+  }
+
+  &--pos-right {
+    margin: 0 -1.25rem;
+  }
+
+  &__inner {
+    .flex(space-around);
+    .flex-flow(column);
+    min-width: 280px;
+  }
+
+  &__title {
+    .font(900,1rem,1.4rem);
+    padding-bottom: 17px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__date {
+    .flex(center);
+    max-width: 335px;
+    width: 100%;
+    margin: 5px 0;
+
+    &-right,
+    &-left {
+      flex: 1;
+      border: 2px solid @white;
+      padding: 14px 10px;
+      .font(400,0.9rem,1rem);
+      background: @green;
+    }
+
+    &-right {
+      border-radius: 0 15px 15px 0;
+      border-left: 0;
+    }
+    &-left {
+      border-radius: 15px 0 0 15px;
+    }
+  }
+
+  &__item {
+    .font(400,0.9rem,1rem);
+    border-radius: @br-15;
+    border: 2px solid @white;
+    background: @green;
+    margin: 5px 0;
+    padding: 0.9rem 0;
+    width: 100%;
+    max-width: 335px;
+
+    &--yellow {
+      background: @yellow !important;
+    }
+
+    &--white {
+      background: @white !important;
+      border: 2px solid @lightgrey !important;
+    }
+
+    &--dark {
+      background: @dark !important;
+      color: @white !important;
+    }
+
+    &--blue {
+      background: @blue !important;
+    }
+  }
+
+  &__button {
+    .font(900,1.1rem,1.3rem);
+    background: @white;
+    color: @dark;
+    order: 1000;
+
+    &--mtop {
+      margin: 2.8rem 0;
+    }
+  }
+
+  &__close {
+    position: relative;
+    width: 15px;
+    height: 24px;
+    margin-top: 15px;
+
+    span {
+      position: absolute;
+      height: 4px;
+      width: 24px;
+      background: @dark;
+      transform: rotate(45deg);
+      right: 0;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      height: 4px;
+      width: 24px;
+      background: @dark;
+      transform: rotate(-45deg);
+      right: 0;
+    }
+  }
+}
+
+.modal-upload {
+  .flex(center);
+  .flex-flow(row);
+  order: 999;
+  width: 100%;
+
+  &__text {
+    margin-left: 10px;
+    .font(900,1rem,1.2rem);
+  }
+}
+
+@media (min-width: 768px) {
+  @media (orientation: landscape) {
+    .card-modal--transform {
+      transform: scale(0.8);
+      bottom: -20px;
+    }
+  }
+
+  .card-modal {
+    position: fixed;
+    margin: 0;
+    z-index: 1;
+    border-radius: @br-15;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+
+    &__inner {
+      min-width: 335px;
+    }
+
+    &--rel {
+      position: relative;
+      border-radius: 0;
+    }
+
+    // &--pos-right {
+    //   margin: 0 -20px;
+    // }
+
+    &__title {
+      flex: 100%;
+      text-align: center;
+    }
+  }
+
+  .modal-upload {
+    &__text {
+      margin-right: auto;
+    }
+  }
+
+  .icon-images {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-modal {
+    &--pos-right {
+      margin: 0 -80px;
+    }
+  }
+  @media (orientation: landscape) {
+    .card-modal--transform {
+      transform: scale(1);
+      bottom: 55px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .card-modal {
+    &--pos-right {
+      box-shadow: none;
+    }
+    &--rel {
+      flex-flow: row wrap;
+      justify-content: center;
+      padding: 3.1rem 1.7rem 4rem;
+      margin: 0;
+    }
+
+    &__inner {
+      max-width: 1280px;
+      width: 100%;
+      &--flex-row {
+        flex-flow: row wrap;
+      }
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      line-height: 29px;
+    }
+
+    &__item {
+      flex: 1;
+
+      &--mr40:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &__button {
+      &--mtop {
+        margin: 2.8rem 0 0;
+      }
+    }
+  }
+
+  .modal-upload {
+    order: 0;
+  }
+}

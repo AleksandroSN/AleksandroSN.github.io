@@ -1,0 +1,52 @@
+.telephone {
+  padding-bottom: 5rem;
+}
+
+.telephone-inner {
+  .flex(center);
+  .flex-flow(row);
+}
+
+.icon-phone {
+  margin: 2.81rem auto 1.25rem;
+  order: 0;
+}
+
+.telephone-block {
+  flex-basis: 100%;
+  .flex(center);
+  .flex-flow(row);
+  .font(400,2rem,2.3rem);
+  margin-bottom: 10px;
+
+  &__text {
+    .font(400,0.9rem,1.3rem);
+    flex: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon-phone {
+    order: 2;
+    margin: auto 0;
+  }
+
+  .telephone {
+    padding: 30px 0;
+
+    &-block {
+      flex: 1;
+      width: 205px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .telephone {
+    &-block {
+      flex: 0 1 auto;
+      width: auto;
+    }
+  }
+}

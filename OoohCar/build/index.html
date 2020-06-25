@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Hello word!</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-wrapper"><a class="header-logo" href="/"><span></span>ok<span class="header-logo__color-grey">car</span></a>
+          <button class="burger-menu"><span></span></button>
+          <nav class="header-list">
+            <ul>
+              <li class="header-list__item"><a href="/index.html">Продажа</a></li>
+              <li class="header-list__item"><a href="/arenda.html">Аренда</a></li>
+              <li class="header-list__item"><a href="/realisation.html">Реализация</a></li>
+              <li class="header-list__item"><a href="/contacts.html">Контакты</a></li>
+            </ul>
+            <div class="header-language">
+              <p class="header-language__text">язык</p><a class="header-language__button" href="#">EN</a><a class="header-language__button" href="#">RU</a><a class="header-language__button" href="#">LV</a>
+            </div>
+            <div class="header-sign"> <span class="header-sign__item">© 2011—2019 ООО «OKCAR». Все права защищены.             </span></div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>           
+      <section class="screen1">
+        <div class="wrapper">
+          <div class="screen1-head">
+            <div class="screen1-head__inner">
+              <h1 class="screen1-head__title">Продажа</h1><a href="/arenda.html">
+                <svg class="icon icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="31" height="70">
+                  <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                </svg></a>
+            </div>
+            <p class="screen1-head__text">
+              Продажа автомобилей с пробегом в странах Евросоюза</p>
+          </div>
+          <div class="screen1-foot">
+            <svg class="icon icon-car" xmlns="http://www.w3.org/2000/svg" width="22.5" height="22.5">
+              <use xlink:href="./img/sprite.svg#car"></use>
+            </svg><span>768</span>
+            <p>автомобилей в наличии        </p>
+          </div>
+        </div>
+      </section>
+      <section class="screen2">
+        <div class="wrapper">
+          <h2 class="hidden">Фильтры</h2>
+          <div class="screen2-filters">
+            <button class="button button-filter">
+              <svg class="icon icon-filter-slide" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <use xlink:href="./img/sprite.svg#filter-slide"></use>
+              </svg><span class="filter-text">Фильтры</span><span class="count">1</span>
+            </button>
+            <div class="button button-year" tabindex="0"> <span class="button-text">Год выпуска <span class="button-text button-text--bold">любой</span></span>
+              <svg class="icon icon-arrow-down" xmlns="http://www.w3.org/2000/svg" width="22" height="11">
+                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              </svg>
+              <ul class="screen2-select screen2-select-year">
+                <li class="screen2-select__option all">Год выпуска <span class="option option--text-bold">любой</span></li>
+                <li class="screen2-select__option year-2010">Год выпуска  <span class="option option--text-bold">2010-2020</span></li>
+                <li class="screen2-select__option year-2000">Год выпуска  <span class="option option--text-bold">2000-2010 </span></li>
+              </ul>
+            </div>
+            <div class="button button-marka" tabindex="0"> <span class="button-text">Марка<span class="button-text button-text--bold">любая</span></span>
+              <svg class="icon icon-arrow-down" xmlns="http://www.w3.org/2000/svg" width="22" height="11">
+                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              </svg>
+              <ul class="screen2-select screen2-select-marka">
+                <li class="screen2-select__option all">Марка <span class="option option--text-bold">Любая</span></li>
+                <li class="screen2-select__option marka-toyota">Марка <span class="option option--text-bold">Toyota</span></li>
+                <li class="screen2-select__option marka-mitsubishi">Марка <span class="option option--text-bold">Mitsubishi               </span></li>
+              </ul>
+            </div>
+            <div class="button button-model" tabindex="0"> <span class="button-text">Модель<span class="button-text button-text--bold">любая</span></span>
+              <svg class="icon icon-arrow-down" xmlns="http://www.w3.org/2000/svg" width="22" height="11">
+                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              </svg>
+              <ul class="screen2-select screen2-select-model">
+                <li class="screen2-select__option all">Модель <span class="option option--text-bold">Любая</span></li>
+                <li class="screen2-select__option model-mitsubishi">Модель <span class="option option--text-bold">Outlander Sport </span></li>
+                <li class="screen2-select__option model-toyota">Модель <span class="option option--text-bold">C-VR             </span></li>
+              </ul>
+            </div>
+            <div class="button button-price" tabindex="0"> <span class="button-text">Сначала<span class="button-text button-text--bold"> дешевые</span></span>
+              <svg class="icon icon-arrow-down" xmlns="http://www.w3.org/2000/svg" width="22" height="11">
+                <use xlink:href="./img/sprite.svg#arrow-down"></use>
+              </svg>
+              <ul class="screen2-select screen2-select-price">
+                <li class="screen2-select__option cheapest">Сначала <span class="option option--text-bold">дешевые </span></li>
+                <li class="screen2-select__option expensive">Сначала <span class="option option--text-bold">дорогие  </span></li>
+                <li class="screen2-select__option popular">Сначала <span class="option option--text-bold">популярные </span></li>
+              </ul>
+            </div>
+            <p class="screen2-find">Найдено <span class="screen2-find-count">254</span></p>
+          </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="wrapper">
+          <h2 class="hidden">Каталог</h2>
+          <div class="catalog-inner">
+            <div class="card mitsubishi">
+              <div class="card-head"><img class="card-head__img" src="./img/image3.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Mitsubishi </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">12 000€</p>
+                <p class="card-body__description"> <span class="description-year">2007 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано-->
+              </div>
+            </div>
+            <div class="card toyota">
+              <div class="card-head"><img class="card-head__img" src="./img/image2.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Toyota </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">17 000€</p>
+                <p class="card-body__description"> <span class="description-year">2009 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано       -->
+              </div>
+            </div>
+            <div class="card mitsubishi">
+              <div class="card-head"><img class="card-head__img" src="./img/image4.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Mitsubishi </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">2 000€</p>
+                <p class="card-body__description"> <span class="description-year">2015 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано-->
+              </div>
+            </div>
+            <div class="card mitsubishi">
+              <div class="card-head"><img class="card-head__img" src="./img/image5.jpg" alt="MitsubishiOutlanderSport">
+                <div class="card-sold">
+                  <p class="card-sold__text">Продано</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Toyota </span><span class="title-model">C-VR</span></p>
+                <p class="card-body__price">9 000€</p>
+                <p class="card-body__description"> <span class="description-year">2002 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button>
+                <!-- button.button.card-footer__more -->
+                <!-- a.button.card-footer__more(href="/car.html") Подробнее-->
+                <button class="button card-footer__more card-footer__more-sold">Продано</button>
+              </div>
+            </div>
+            <div class="card toyota">
+              <div class="card-head"><img class="card-head__img" src="./img/image6.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Mitsubishi </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">9 000€</p>
+                <p class="card-body__description"> <span class="description-year">2008 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано-->
+              </div>
+            </div>
+            <div class="card mitsubishi">
+              <div class="card-head"><img class="card-head__img" src="./img/image7.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Mitsubishi </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">7 000€</p>
+                <p class="card-body__description"> <span class="description-year">2016 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано-->
+              </div>
+            </div>
+            <div class="card toyota">
+              <div class="card-head"><img class="card-head__img" src="./img/image8.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Toyota </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">26 000€</p>
+                <p class="card-body__description"> <span class="description-year">2019 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано-->
+              </div>
+            </div>
+            <div class="card toyota">
+              <div class="card-head"><img class="card-head__img" src="./img/image9.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Mitsubishi </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">5 000€</p>
+                <p class="card-body__description"> <span class="description-year">2001 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано            -->
+              </div>
+            </div>
+            <div class="card toyota">
+              <div class="card-head"><img class="card-head__img" src="./img/image6.jpg" alt="MitsubishiOutlanderSport">
+                <!-- .card-sold-->
+                <!--     p.card-sold__text Продано-->
+              </div>
+              <div class="card-body">
+                <p class="card-body__title"> <span class="title-marka">Toyota </span><span class="title-model">Outlander Sport</span></p>
+                <p class="card-body__price">14 000€</p>
+                <p class="card-body__description"> <span class="description-year">2011 год, </span><span class="description-volume">объем 1л., </span><span class="description-probeg">пробег 320 000км.</span></p>
+              </div>
+              <div class="card-footer">
+                <button class="button card-footer__tel">
+                  <svg class="icon icon-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <use xlink:href="./img/sprite.svg#phone"></use>
+                  </svg><span>+333 5544 6655</span>
+                </button><a class="button card-footer__more" href="/car.html">Подробнее</a>
+                <!-- button.button.card-footer__more.card-footer__more-sold Продано-->
+              </div>
+            </div>
+          </div>
+          <div class="catalog-more-cards">
+            <button class="button-more">
+              <svg class="icon icon-full-arrow-down" xmlns="http://www.w3.org/2000/svg" width="11" height="11">
+                <use xlink:href="./img/sprite.svg#full-arrow-down"></use>
+              </svg>
+            </button>
+            <p class="catalog-more-cards__text">Показать еще                </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper"> 
+        <div class="footer-wrapper"><a class="footer-logo" href="/"><span>ok</span><span class="footer-logo__color-grey">car</span></a>
+          <div class="footer-mail">
+            <svg class="icon icon-envelope" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <use xlink:href="./img/sprite.svg#envelope"></use>
+            </svg>
+          </div>
+          <div class="footer-list">
+            <ul class="footer-list__flex">
+              <li class="footer-list__item"><a href="/">Продажа</a></li>
+              <li class="footer-list__item footer-list__item-order-3"><a href="/arenda.html">Аренда</a></li>
+              <li class="footer-list__item"><a href="/realisation.html">Реализация</a></li>
+              <li class="footer-list__item footer-list__item-order-4"><a href="/contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-politics"><a class="footer-politics__item" href="#"><span>Пользовательское соглашение</span></a><a class="footer-politics__item" href="#"><span>Политика конфидециальности</span></a><a class="footer-politics__item" href="#"><span>Обработка персональных данных</span></a></div>
+          <div class="footer-sign"><span class="footer-sign__item">© 2011—2019 ООО «OKCAR». Все права защищены.</span></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/swiper.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

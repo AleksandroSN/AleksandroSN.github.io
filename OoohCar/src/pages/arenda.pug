@@ -1,0 +1,10 @@
+extends ./common/layout
+block links      
+        link(rel="stylesheet",href="css/style.min.css")
+        link(rel="stylesheet",href="css/style-arenda.min.css")
+block content
+    include ./screens/screen1-arenda
+    include ./screens/screen2
+    include ./screens/main-catalog-arenda
+block scripts
+    script(src="./js/filter.js")    

@@ -1,0 +1,12 @@
+
+form.card-modal.card-modal--rel.card-modal--blue.active-flex
+    .card-modal__inner.card-modal__inner--flex-row
+        h2.card-modal__title Заявка на реализацию автомобиля
+        .modal-upload
+            input.filepond(type='file' name='filepond' multiple data-max-file-size='3MB')       
+            //- +icon('images','29','27')
+            //- span.modal-upload__text загрузить фото
+        input.card-modal__item.card-modal__item--mr40.card-modal__item--blue(type="text" placeholder="Ваше имя")
+        input.card-modal__item.card-modal__item--mr40.card-modal__item--blue(type="email" placeholder="Электронная почта")
+        input.card-modal__item.card-modal__item--mr40.card-modal__item--blue(type="text" placeholder="Телефон")                    
+        button.card-modal__button.card-modal__item.card-modal__item--mr40(type="submit") Отправить заявку

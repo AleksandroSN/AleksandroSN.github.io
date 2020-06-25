@@ -1,0 +1,96 @@
+@import "./mixins/mixin.less";
+@import "./common/header-realisation";
+@import "./screens/realisation/screen1-realisation";
+@import "./screens/realisation/offers";
+@import "./includes/modal";
+@import "./common/footer-realisation.less";
+@import "../../node_modules/filepond/dist/filepond.min.css";
+@import "../../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css";
+
+.filepond {
+  &--root {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 1rem;
+
+    @media (min-width: 1440px) {
+      margin-bottom: -1rem;
+    }
+  }
+
+  &--item {
+    width: calc(50% - 0.5em);
+
+    @media (min-width: 768px) {
+      width: calc(33% - 0.5em);
+    }
+
+    @media (min-width: 1440px) {
+      width: calc(10% - 1.6em);
+    }
+    &-panel {
+      background-color: transparent;
+    }
+  }
+
+  /*Верхняя надпись*/
+  &--drop-label {
+    color: #000000;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 1s;
+
+    @media (min-width: 1440px) {
+      width: 20%;
+    }
+  }
+
+  /*Кнопка Browse*/
+  &--label-action {
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 900;
+    line-height: 19px;
+  }
+  /*Основные кнопки*/
+  &--file-action-button {
+    cursor: pointer;
+    background: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 0.125em rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  /*Обертка всей библиотеки*/
+  &--panel-root {
+    border-radius: 15px;
+    background-color: transparent;
+  }
+
+  /*Имя файла*/
+  &--file-info {
+    display: none !important;
+  }
+
+  /*Начало файлов*/
+  &--list-scroller {
+    transition: 1s;
+  }
+
+  /*Цвета статусов у info*/
+  &--image-preview-overlay-idle,
+  &--image-preview-overlay-success,
+  &--image-preview-overlay-failure {
+    color: transparent;
+  }
+}
+
+.filepond--drop-label.filepond--drop-label label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+}

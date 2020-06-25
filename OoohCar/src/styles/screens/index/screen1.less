@@ -1,0 +1,90 @@
+.screen1 {
+  background: url("../img/car-main-phone.jpg") center center no-repeat;
+  background-size: cover;
+
+  &-head {
+    max-width: 330px;
+
+    &__inner {
+      position: relative;
+    }
+  }
+
+  &-head__title {
+    .font(900,3rem,4.2rem);
+    padding-top: 151px;
+    margin: 0;
+  }
+
+  &-head__text {
+    .font(400,1.25rem,1.875rem);
+    padding-top: 1rem;
+    margin-right: 15px;
+  }
+
+  &-foot {
+    padding: 5.06rem 0 4.6rem;
+
+    &__text {
+      .font(400,1.25rem,1.9rem);
+      padding-top: 1rem;
+      margin-right: 0.9rem;
+    }
+
+    span {
+      .font(900,2rem,2.2rem);
+      margin-left: 6px;
+    }
+
+    p {
+      .font(400,0.9rem,1.3rem);
+    }
+  }
+}
+
+.icon-arrow-right {
+  position: absolute;
+  right: 25px;
+  top: 67%;
+  fill: @yellow;
+}
+
+@media (min-width: 768px) {
+  .screen1 {
+    background: url(../img/car-main.jpg) top 10px right -120px no-repeat;
+  }
+
+  .icon-arrow-right {
+    right: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .screen1 {
+    background-size: contain;
+    background-position: center right;
+
+    &-head {
+      max-width: 650px;
+
+      &__inner {
+        position: relative;
+      }
+    }
+
+    &-head__title {
+      font-size: 5rem;
+      line-height: 5.5625rem;
+      margin: 0;
+    }
+
+    &-head__text {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  .icon-arrow-right {
+    display: none;
+  }
+}

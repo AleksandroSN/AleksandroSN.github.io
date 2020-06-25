@@ -1,0 +1,67 @@
+section.car-detail
+    .wrapper       
+        .breadcrumbs
+            +icon('arrow-left','16','14')
+            a(href="/index.html")
+                span.breadcrumbs__text продажа
+        .container
+            .car-detail__card    
+                .car-detail__head
+                    p.head-title Mitsubishi Outlander Sport
+                .slider    
+                    .swiper-container.gallery-top
+                        .swiper-wrapper
+                            .swiper-slide(style='background-image:url(./img/thumb1-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb2-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb3-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb4-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb5-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb1-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb2-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb3-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb4-xl.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb5-xl.jpg)')            
+                    .swiper-container.gallery-thumbs
+                        .swiper-wrapper
+                            .swiper-slide(style='background-image:url(./img/thumb1.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb2.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb3.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb4.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb5.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb1.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb2.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb3.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb4.jpg)')
+                            .swiper-slide(style='background-image:url(./img/thumb5.jpg)') 
+                        // Add Arrows
+                    .swiper-button-next.swiper-button-black
+                    .swiper-button-prev.swiper-button-black    
+                .car-detail__body
+                    .car-detail__item
+                        p.car-detail__item-name Коробка передач
+                        p.car-detail__item-character Механическая
+                    .car-detail__item
+                        p.car-detail__item-name Двигатель
+                        p.car-detail__item-character 5 л
+                    .car-detail__item
+                        p.car-detail__item-name Пробег
+                        p.car-detail__item-character 200 000 км 
+                    .car-detail__item
+                        p.car-detail__item-name Бак
+                        p.car-detail__item-character 50 л
+                    .car-detail__item
+                        p.car-detail__item-name Тип топлива
+                        p.car-detail__item-character Бензин
+                .catalog-more-cards.catalog-more-cards--expend
+                    button.button-more
+                        +icon('full-arrow-down','11','11')
+                    p.catalog-more-cards__text все характеристики  
+                .car-detail__footer
+                    p.car-detail__footer-text 
+                        | Mitsubishi Outlander продолжает развивать спортивную концепцию дизайна Dynamic Shield.
+                        br
+                        br
+                        | Передняя часть кроссовера оформлена в новой мировой концепции дизайна бренда Mitsubishi Motors: усовершенствованная радиаторная решетка, обновленный дизайн бампера. Автомобиль отличается от предшественника выразительным дизайном передних фар в комбинации со светодиодными LED-светом, модернизированным дизайном колесных дисков, но при этом остается узнаваемым.
+            include ../includes/modals/car-modal                          
+            
+                

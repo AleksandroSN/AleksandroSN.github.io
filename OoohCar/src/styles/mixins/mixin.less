@@ -1,0 +1,27 @@
+@yellow: #fdd835;
+@lightgrey: #f2f2f2;
+@grey: #939393;
+@dark: #000;
+@white: #fff;
+@green: #8bc34a;
+@blue: #46bcec;
+@br-25: 25px;
+@br-15: 15px;
+@br-0-15: 0 0 15px 15px;
+@br-15-0: 15px 15px 0 0;
+
+.font(@weight, @fontsize, @lineheight) {
+  font-weight: @weight;
+  font-size: @fontsize;
+  line-height: @lineheight;
+}
+
+.flex(@jfcontent) {
+  display: flex;
+  align-items: center;
+  justify-content: @jfcontent;
+}
+
+.flex-flow(@direction) {
+  flex-flow: @direction wrap;
+}

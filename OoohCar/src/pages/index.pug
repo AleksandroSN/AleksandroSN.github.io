@@ -1,0 +1,9 @@
+extends ./common/layout
+block links
+    link(rel="stylesheet",href="css/style.min.css")
+block content
+    include ./screens/screen1
+    include ./screens/screen2
+    include ./screens/main-catalog
+block scripts
+    script(src="./js/filter.js")

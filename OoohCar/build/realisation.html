@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style-realisation.min.css">
+    <title>Hello word!</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-wrapper"><a class="header-logo" href="/"><span></span>ok<span class="header-logo__color-grey">car</span></a>
+          <button class="burger-menu"><span></span></button>
+          <nav class="header-list">
+            <ul>
+              <li class="header-list__item"><a href="/index.html">Продажа</a></li>
+              <li class="header-list__item"><a href="/arenda.html">Аренда</a></li>
+              <li class="header-list__item"><a href="/realisation.html">Реализация</a></li>
+              <li class="header-list__item"><a href="/contacts.html">Контакты</a></li>
+            </ul>
+            <div class="header-language">
+              <p class="header-language__text">язык</p><a class="header-language__button" href="#">EN</a><a class="header-language__button" href="#">RU</a><a class="header-language__button" href="#">LV</a>
+            </div>
+            <div class="header-sign"> <span class="header-sign__item">© 2011—2019 ООО «OKCAR». Все права защищены.             </span></div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>           
+      <section class="screen1">
+        <div class="wrapper">
+          <div class="screen1-head">
+            <div class="screen1-head__inner">
+              <h1 class="screen1-head__title">
+                 Не трать<br>свое время</h1><a href="/contacts.html">
+                <svg class="icon icon-arrow-right" xmlns="http://www.w3.org/2000/svg" width="31" height="70">
+                  <use xlink:href="./img/sprite.svg#arrow-right"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="screen1-foot">
+            <svg class="icon icon-stopwatch" xmlns="http://www.w3.org/2000/svg" width="62" height="62">
+              <use xlink:href="./img/sprite.svg#stopwatch"></use>
+            </svg>
+            <p class="screen1-foot__text">
+              Прием автомобилей на реализацию в Евросоюзе       </p>
+          </div>
+        </div>
+      </section>
+      <section class="offers">
+        <div class="wrapper">
+          <h2 class="hidden">Предложения</h2>
+          <div class="offers-inner">
+            <div class="offer1">
+              <p class="offer-text">Выставления объявлений на балтийских, европейских и скандинавских сайтах</p>
+            </div>
+            <div class="offer2">
+              <svg class="icon icon-camera" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+                <use xlink:href="./img/sprite.svg#camera"></use>
+              </svg>
+              <p class="offer-text">Профессиональные фотографии автомобиля</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <form class="card-modal card-modal--rel card-modal--blue active-flex">
+        <div class="card-modal__inner card-modal__inner--flex-row">
+          <h2 class="card-modal__title">Заявка на реализацию автомобиля</h2>
+          <div class="modal-upload">
+            <input class="filepond" type="file" name="filepond" multiple data-max-file-size="3MB">
+          </div>
+          <input class="card-modal__item card-modal__item--mr40 card-modal__item--blue" type="text" placeholder="Ваше имя">
+          <input class="card-modal__item card-modal__item--mr40 card-modal__item--blue" type="email" placeholder="Электронная почта">
+          <input class="card-modal__item card-modal__item--mr40 card-modal__item--blue" type="text" placeholder="Телефон">
+          <button class="card-modal__button card-modal__item card-modal__item--mr40" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="wrapper"> 
+        <div class="footer-wrapper"><a class="footer-logo" href="/"><span>ok</span><span class="footer-logo__color-grey">car</span></a>
+          <div class="footer-mail">
+            <svg class="icon icon-envelope" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <use xlink:href="./img/sprite.svg#envelope"></use>
+            </svg>
+          </div>
+          <div class="footer-list">
+            <ul class="footer-list__flex">
+              <li class="footer-list__item"><a href="/">Продажа</a></li>
+              <li class="footer-list__item footer-list__item-order-3"><a href="/arenda.html">Аренда</a></li>
+              <li class="footer-list__item"><a href="/realisation.html">Реализация</a></li>
+              <li class="footer-list__item footer-list__item-order-4"><a href="/contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-politics"><a class="footer-politics__item" href="#"><span>Пользовательское соглашение</span></a><a class="footer-politics__item" href="#"><span>Политика конфидециальности</span></a><a class="footer-politics__item" href="#"><span>Обработка персональных данных</span></a></div>
+          <div class="footer-sign"><span class="footer-sign__item">© 2011—2019 ООО «OKCAR». Все права защищены.</span></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/filepond.min.js"></script>
+    <script src="js/filepond-plugin-image-exif-orientation.min.js"></script>
+    <script src="js/filepond-plugin-image-crop.min.js"></script>
+    <script src="js/filepond-plugin-image-preview.min.js"></script>
+    <script src="js/filepond-plugin-file-validate-type.min.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

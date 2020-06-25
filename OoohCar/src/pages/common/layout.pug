@@ -1,0 +1,21 @@
+﻿include ../mixins/mixin.pug
+
+doctype html
+html(lang='ru')
+  block head
+      head
+          meta(charset='utf-8')
+          meta( name='viewport',content='width=device-width,initial-scale=1')
+          block links
+          title Hello word!
+  body
+    block header
+        include header
+    main            
+        block content
+    block footer
+        include footer
+    script(src="js/swiper.min.js")
+    block scripts
+    script(src="js/main.js")
+    

@@ -1,0 +1,139 @@
+.catalog-inner {
+  display: flex;
+  justify-content: center;
+  .flex-flow(row);
+
+  &.flex-start {
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
+}
+
+.card {
+  display: flex;
+  .flex-flow(column);
+  padding: 0 0 2.5rem;
+  position: relative;
+
+  @media (min-width: 768px) {
+    flex: 0 1 47%;
+  }
+
+  @media (min-width: 1440px) {
+    flex: 0 1 31.2%;
+  }
+
+  &-head {
+    .flex(center);
+    align-self: center;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    flex: 1;
+
+    &__img {
+      border-radius: @br-25;
+    }
+  }
+
+  &-sold {
+    .flex(center);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: @br-25;
+    background: rgba(200, 200, 200, 0.75);
+
+    &__text {
+      .font(900,2rem,2.3rem);
+      color: @white;
+    }
+  }
+
+  &-body {
+    .flex(space-between);
+    .flex-flow(row);
+    padding-top: 15px;
+
+    &__title {
+      .font(400,1.1rem,1.3rem);
+    }
+    &__price {
+      .font(700,1.1rem,1.3rem);
+    }
+
+    &__description {
+      .font(400,0.9rem,1.1rem);
+      color: @grey;
+      flex: 100%;
+      padding-top: 24px;
+    }
+  }
+
+  &-footer {
+    padding-top: 16px;
+    display: flex;
+
+    &__tel {
+      background: @lightgrey;
+      .font(400,0.9rem,1rem);
+      padding: 11px 0;
+      margin-right: 5px;
+      flex: 1;
+    }
+
+    &__more {
+      background: @dark;
+      color: @yellow;
+      .font(700,0.9rem,1rem);
+      padding: 17px 13.5px;
+
+      &-sold {
+        color: @lightgrey;
+        background: @grey;
+        padding: 0 22px;
+      }
+    }
+  }
+}
+
+.icon-phone {
+  margin-right: 5px;
+}
+
+.catalog-more-cards {
+  .flex(center);
+  .flex-flow(row);
+  height: 50px;
+  max-width: 100px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  &--expend {
+    max-width: 175px;
+    flex-wrap: nowrap;
+  }
+
+  &__text {
+    .font(700,0.75rem,0.9rem);
+    text-transform: uppercase;
+    flex: 80%;
+    text-align: center;
+  }
+}
+
+.button-more {
+  height: 21px;
+  width: 21px;
+  background: @dark;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon-full-arrow-down {
+  fill: @yellow;
+}
