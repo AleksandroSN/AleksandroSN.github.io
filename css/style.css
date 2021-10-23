@@ -157,7 +157,11 @@ button {
 }
 
 .mainSection__text article h2 {
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.mainSection__text article h3 {
+  padding: 0.3rem 0;
 }
 
 #ExpAndEducation ul li {
