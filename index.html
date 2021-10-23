@@ -1,540 +1,145 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="min.style.css">
-	<link rel= "preconnect" href="https://api-maps.yandex.ru" crossorigin>
-	<link rel= "preconnect" href="https://vec01.maps.yandex.net" crossorigin>
-	<link rel= "preconnect" href="https://vec03.maps.yandex.net" crossorigin>
-	<link rel= "preconnect" href="https://vec04.maps.yandex.net" crossorigin>
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet" />
-	<title>Elochka,BURN!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rsschool-2020-Q3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
-	<header>
-		<div class="container flex">
-				<div class="logo">
-					<img src="images/logo.png" alt="logo">
-				</div>
+  <header class="header">
+    <!-- <a class="header-logo"></a> -->
 
-				
+    <nav class="header__nav">
+      <button class="header__burger" type="button" aria-label="Menu">
+        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50"
+          aria-hidden="true">
+          <circle class="svg-burger-circle" cx="25" cy="25" r="25" />
+          <rect x="13" y="19" width="24" height="2" fill="white" />
+          <rect x="13" y="29" width="24" height="2" fill="white" />
+          <rect x="13" y="24" width="24" height="2" fill="white" />
+        </svg>
+      </button>
+      <ul class="header__nav-menu">
+        <li class="nav-menu menu-item">
+          <a class="menu-item__link" href="#Summary">Summary</a>
+        </li>
+        <li class="nav-menu menu-item">
+          <a class="menu-item__link" href="#Skills">Skills</a>
+        </li>
+        <li class="nav-menu menu-item">
+          <a class="menu-item__link" href="#ExpAndEducation">Expirience and Education</a>
+        </li>
+        <li class="nav-menu menu-item">
+          <a class="menu-item__link" href="#">Code examples and Contacts</a>
+        </li>
+      </ul>
+      <ul class="header__nav-contacts">
+        <li class="nav-contacts">
+          <a class="nav-contacts__link" href="https://t.me/FerGog" title="Telegram" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true" viewBox="0 0 300 300">
+              <path
+                d="M5.299 144.645l69.126 25.8 26.756 86.047c1.712 5.511 8.451 7.548 12.924 3.891l38.532-31.412a11.496 11.496 0 0 1 14.013-.391l69.498 50.457c4.785 3.478 11.564.856 12.764-4.926L299.823 29.22c1.31-6.316-4.896-11.585-10.91-9.259L5.218 129.402c-7.001 2.7-6.94 12.612.081 15.243zm91.57 12.066l135.098-83.207c2.428-1.491 4.926 1.792 2.841 3.726L123.313 180.87a23.112 23.112 0 0 0-7.163 13.829l-3.798 28.146c-.503 3.758-5.782 4.131-6.819.494l-14.607-51.325c-1.673-5.854.765-12.107 5.943-15.303z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-contacts">
+          <a class="nav-contacts__link" href="mailto:aleksandrosemnik@gmail.com" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true" width="1em" height="1em"
+              viewBox="0 0 485.4 485.4">
+              <path
+                d="M0 81.8v321.8h485.4V81.8H0zM242.7 280.5L43.6 105.7h398.2L242.7 280.5zM163.4 242.6L23.9 365.2V120.1L163.4 242.6zM181.5 258.5l61.2 53.8 61.2-53.8L441.9 379.7H43.5L181.5 258.5zM322 242.7l139.5-122.5v245.1L322 242.7z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-contacts">
+          <a class="nav-contacts__link" href="https://github.com/AleksandroSN" title="GitHub" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true" width="1em" height="1em"
+              viewBox="0 0 438.5 438.5">
+              <path
+                d="M409.1 114.6c-19.6-33.6-46.2-60.2-79.8-79.8C295.7 15.2 259.1 5.4 219.3 5.4c-39.8 0-76.5 9.8-110.1 29.4 -33.6 19.6-60.2 46.2-79.8 79.8C9.8 148.2 0 184.9 0 224.6c0 47.8 13.9 90.7 41.8 128.9 27.9 38.2 63.9 64.6 108.1 79.2 5.1 1 8.9 0.3 11.4-2 2.5-2.3 3.7-5.1 3.7-8.6 0-0.6 0-5.7-0.1-15.4 -0.1-9.7-0.1-18.2-0.1-25.4l-6.6 1.1c-4.2 0.8-9.5 1.1-15.8 1 -6.4-0.1-13-0.8-19.8-2 -6.9-1.2-13.2-4.1-19.1-8.6 -5.9-4.5-10.1-10.3-12.6-17.6l-2.9-6.6c-1.9-4.4-4.9-9.2-9-14.6 -4.1-5.3-8.2-8.9-12.4-10.8l-2-1.4c-1.3-1-2.6-2.1-3.7-3.4 -1.1-1.3-2-2.7-2.6-4 -0.6-1.3-0.1-2.4 1.4-3.3 1.5-0.9 4.3-1.3 8.3-1.3l5.7 0.9c3.8 0.8 8.5 3 14.1 6.9 5.6 3.8 10.2 8.8 13.8 14.8 4.4 7.8 9.7 13.8 15.8 17.8 6.2 4.1 12.4 6.1 18.7 6.1 6.3 0 11.7-0.5 16.3-1.4 4.6-1 8.8-2.4 12.8-4.3 1.7-12.8 6.4-22.6 14-29.4 -10.8-1.1-20.6-2.9-29.3-5.1 -8.7-2.3-17.6-6-26.8-11.1 -9.2-5.1-16.9-11.5-23-19.1 -6.1-7.6-11.1-17.6-15-30 -3.9-12.4-5.9-26.6-5.9-42.8 0-23 7.5-42.6 22.6-58.8 -7-17.3-6.4-36.7 2-58.2 5.5-1.7 13.7-0.4 24.6 3.9 10.9 4.3 18.8 8 23.8 11 5 3 9.1 5.6 12.1 7.7 17.7-4.9 36-7.4 54.8-7.4s37.1 2.5 54.8 7.4l10.8-6.8c7.4-4.6 16.2-8.8 26.3-12.6 10.1-3.8 17.8-4.9 23.1-3.1 8.6 21.5 9.3 40.9 2.3 58.2 15 16.2 22.6 35.8 22.6 58.8 0 16.2-2 30.5-5.9 43 -3.9 12.5-8.9 22.5-15.1 30 -6.2 7.5-13.9 13.9-23.1 19 -9.2 5.1-18.2 8.9-26.8 11.1 -8.7 2.3-18.4 4-29.3 5.1 9.9 8.6 14.8 22.1 14.8 40.5v60.2c0 3.4 1.2 6.3 3.6 8.6 2.4 2.3 6.1 3 11.3 2 44.2-14.7 80.2-41.1 108.1-79.2 27.9-38.2 41.8-81.1 41.8-128.9C438.5 184.9 428.7 148.2 409.1 114.6z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-contacts">
+          <a class="nav-contacts__link" href="https://www.codewars.com/users/AleksandroSN" title="CodeWars"
+            target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" aria-hidden="true" width="1em" height="1em" style="
+                  -ms-transform: rotate(360deg);
+                  -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+                " preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <path
+                d="M.76 12.2l-.08-.04c-.18-.1-.32-.25-.42-.44c-.14-.26-.2-.5-.2-.75l.02-.13c0-.2.05-.38.14-.55l.08-.15c.04-.08.1-.15.15-.22c.06-.07.07-.16.05-.24l-.05-.16c-.06-.2-.1-.4-.1-.6L.32 8.8c0-.22.06-.44.2-.6l.1-.13c.07-.1.18-.16.3-.2c.1-.03.17-.13.18-.25l.02-.34c0-.27.13-.52.33-.7l.24-.18c.05-.05.1-.1.14-.18c.05-.06.06-.14.05-.2c-.02-.1 0-.13.05-.14c.16.06.26.04.33-.04l.13-.17l.36-.4a.4.4 0 0 0 .08-.42l-.12-.26c-.02-.06 0-.13.05-.15c.13 0 .22.05.26.13l.04.07c.06.12.2.18.3.13c.22-.08.4-.1.57-.1h.32c.22 0 .4-.15.44-.38c.04-.28.14-.5.28-.65c.15-.17.32-.3.52-.4c.26-.14.42-.34.47-.6c.07-.32.24-.55.47-.7l.76-.43l.22-.13c.13-.08.25-.18.35-.3l.2-.24c.1-.1.2-.17.32-.2c.1-.03.24-.05.36-.04l.4.03c.2 0 .36.05.52.12l.1.05c.1.04.2.02.25-.05L10 .7l.43-.45c.1-.1.22-.14.35-.12c.13.02.26.07.38.13c.18.1.33.14.5.14h.1c.22 0 .44.03.66.08l.15.04c.15.04.3-.02.4-.14c.03-.05.1-.06.14-.02c.03.02.04.04.05.07c.02.2.14.35.3.4l.16.05a.8.8 0 0 1 .42.3c.1.15.22.3.36.4l.1.1c.1.1.24.14.38.13h.59c.24 0 .47.04.7.14c.22.1.45.12.66.04c.22-.07.45-.1.68-.07l.43.07c.2.02.4.12.52.27l.05.05c.1.1.2.23.3.37c.06.13.2.2.34.2h.62c.15 0 .3.03.42.1c.13.1.24.2.34.3l.1.13c.12.14.18.33.17.53c0 .16.12.3.28.3l.2.02c.14 0 .26.1.33.23l.1.2l.26.58c.04.1.05.2.04.28c0 .1.03.18.1.22l.1.07c.13.1.2.25.18.42l-.07.47l-.02.2c-.02.1.03.23.12.3c.15.1.22.23.23.38v.2c0 .1-.02.22-.1.3c-.06.08-.1.18-.1.3l.03.23c0 .16.1.3.2.4c.14.1.22.26.24.42c.04.25.05.45.05.65v.23c0 .08 0 .16.03.24c.02.07.07.14.13.18l.2.15c.2.13.34.3.42.53c.1.22.13.45.13.68v.08c0 .18-.02.37-.08.54a.71.71 0 0 0 .03.5c.08.14.13.3.15.47c.04.2.02.4-.05.56l-.02.07c-.05.12-.13.23-.23.32c-.1.1-.2.16-.26.23c-.06.06-.1.16-.07.25l.03.14c.05.2.05.4 0 .58v.08c-.04.15-.1.28-.16.4c-.07.13-.17.23-.3.3l-.15.1a.26.26 0 0 0-.12.22c0 .1-.04.2-.1.26l-.15.2c-.1.13-.23.24-.37.3c-.14.1-.26.2-.35.3c-.1.12-.18.26-.22.4c-.04.18-.18.28-.33.28h-.54c-.14 0-.27.1-.33.22c-.07.16-.14.27-.23.37a.8.8 0 0 0-.2.36c-.02.12-.12.2-.22.16c-.13-.06-.26 0-.32.1c-.12.2-.24.35-.37.48l-.07.06c-.13.1-.3.18-.45.18c-.18 0-.27.08-.3.2c-.03.1-.05.23-.06.34c-.02.12-.06.23-.1.33l-.05.06c-.1.15-.18.3-.28.43l-.04.06c-.13.17-.3.3-.5.35a2 2 0 0 1-.66.1h-.14c-.1 0-.2.06-.27.16l-.06.1l-.06.12l-.13.22c-.1.18-.25.3-.45.36c-.2.05-.43.07-.64.06l-.16-.02c-.14 0-.27-.04-.4-.1c-.1-.04-.24 0-.3.1c-.1.14-.22.22-.35.26l-.3.1c-.2.05-.42.05-.63 0l-.16-.05c-.1 0-.2-.05-.28-.1a.54.54 0 0 0-.3-.06l-.13.02c-.2.02-.38 0-.56-.05l-.27-.06a.57.57 0 0 1-.3-.23a.393.393 0 0 0-.3-.2H9.9c-.2-.03-.38-.1-.5-.25L9 22.5l-.14-.12l-.22-.16l-.13-.1c-.15-.1-.33-.18-.52-.2l-.6-.1c-.06 0-.1-.02-.16-.03L7 21.74c-.1-.02-.2-.1-.27-.2c-.06-.1-.17-.14-.27-.1c-.2.08-.36.1-.52.13H5.8c-.26.02-.5-.02-.74-.13c-.24-.1-.4-.25-.55-.44c-.12-.17-.3-.3-.52-.34l-.28-.06c-.2-.04-.4-.12-.58-.24c-.2-.14-.3-.27-.38-.43c-.08-.15-.13-.32-.14-.5v-.08a.495.495 0 0 0-.35-.43c-.23-.07-.4-.17-.55-.3a.71.71 0 0 1-.22-.52l.02-.44c0-.17-.05-.32-.17-.43a.62.62 0 0 1-.2-.43l-.03-.36a5.29 5.29 0 0 0-.13-.78c-.06-.23.03-.46.22-.57l.07-.05c.1-.07.14-.2.08-.32l-.08-.1a.75.75 0 0 0-.3-.2c-.08-.02-.1-.1-.1-.15l.1-.12c.06-.07.05-.18 0-.24a.455.455 0 0 1-.13-.28l-.02-.7c0-.14.02-.28.06-.42c.04-.12 0-.26-.12-.32zm9.9-1.32c.07-.07.06-.2 0-.25a.973.973 0 0 1-.23-.27l-.1-.16a1.46 1.46 0 0 0-.26-.34l-.02-.02a.86.86 0 0 1-.23-.3c-.05-.1-.05-.2 0-.3l.06-.1c.06-.1.1-.24.1-.36v-.04c0-.1-.04-.2-.1-.3c-.04-.08-.08-.18-.1-.28V8.1c-.03-.12 0-.25.08-.35c.08-.13.14-.25.17-.4v-.02c.04-.1.02-.23-.04-.33s-.08-.2-.04-.32l.07-.2c.06-.18.15-.34.27-.48l.14-.15l.1-.12l.06-.06c.06-.06.07-.16.02-.24c-.05-.1-.08-.2-.06-.3l.02-.14c.03-.2.1-.4.23-.56l.04-.04c.15-.2.34-.33.56-.4l.27-.1c.12-.04.2-.17.2-.3c0-.16.05-.3.14-.43l.05-.05c.1-.17.22-.34.3-.52l.07-.13c.02-.03.03-.07.03-.1c0-.17-.1-.32-.26-.33L11.76 2c-.25-.02-.5 0-.74 0l-.85.1c-.13 0-.23.1-.24.24c0 .14-.1.26-.22.3l-.36.1l-.1.03l-.3.1c-.22.07-.4.23-.5.45l-.08.13c-.1.22-.27.4-.48.53c-.2.13-.3.34-.32.58v.1c-.02.2-.08.4-.2.54l-.05.08c-.08.1-.1.23-.05.34c.05.12.08.25.07.38v.53c0 .14-.1.26-.2.3c-.14.05-.23.16-.27.3l-.05.2c-.04.2.03.4.2.52c.16.12.26.3.3.52v.18c.03.2.14.4.32.5c.18.12.32.3.4.5l.05.16c.08.22.26.35.46.37h.06c.18 0 .34.1.44.26c.1.16.26.27.44.3l.28.08c.17.05.33.14.46.27l.02.02c.1.08.26.07.35-.04l.07-.08zm1.14-.92c.1.06.2.03.24-.06l.03-.05c.07-.14.16-.28.26-.4l.2-.3c.03 0 .04-.02.05-.04l.24-.32c.1-.1.22-.17.36-.17c.13 0 .24-.07.3-.2c.04-.14.1-.27.22-.38l.05-.06c.1-.1.2-.15.3-.2c.13-.02.25-.04.37-.04h.3c.12 0 .22-.05.28-.15c.06-.1.15-.17.25-.22l.1-.04c.16-.07.34-.12.52-.14l.2-.02c.12 0 .25 0 .37.07c.1.07.23.06.33-.02l.07-.04c.15-.1.32-.18.5-.2h.02c.2-.04.38-.04.58-.03h.1c.2.03.37.1.5.25l.03.04c.1.1.26.18.4.18h.17c.05 0 .1-.02.13-.07c.03-.03.08-.06.13-.06h.1c.14 0 .27.04.4.08l.17.07c.16.05.33.1.5.12h.12c.08 0 .13-.05.13-.12c0-.1-.02-.2-.07-.28L20.68 7c-.08-.13-.14-.27-.2-.4l-.02-.05c-.05-.1-.05-.2 0-.3V6.2a.17.17 0 0 0-.1-.2h-.08a.796.796 0 0 1-.4-.27l-.1-.1c-.1-.1-.16-.25-.2-.4c-.05-.13-.16-.23-.3-.23h-.42a.552.552 0 0 1-.37-.22l-.04-.05c-.07-.1-.13-.22-.17-.34c-.05-.1-.16-.16-.26-.13l-.12.04c-.2.07-.4.1-.6.08l-.16-.02c-.17 0-.33-.07-.46-.17l-.1-.07c-.08-.06-.16-.1-.25-.14c-.1-.04-.18-.02-.24.05l-.05.06c-.1.1-.24.18-.38.2l-.54.03c-.1 0-.2.05-.27.12c-.08.07-.17.12-.27.14h-.02c-.1 0-.2.07-.3.14v.02c-.1.1-.23.15-.36.15l-.04.02c-.12 0-.24 0-.36.03h-.12c-.17.03-.3.17-.34.35l-.04.23a1 1 0 0 1-.2.43c-.1.12-.22.2-.37.2H12.26c-.1.02-.2.13-.18.25c.02.17 0 .32-.03.47l-.04.17c-.04.15-.14.27-.27.32l-.06.03h-.02c-.06.04-.1.13-.05.2c.06.1.08.2.07.3l-.03.32c0 .12-.05.23-.1.33c-.06.1-.06.2-.02.3l.1.22c.05.1.06.2.03.32c-.03.1-.05.2-.04.3c0 .1.06.2.14.24l.02.02zm7.9 7.23c.1.1.25.14.37.06l.2-.13c.1-.07.18-.17.22-.3v-.02l.1-.3l.06-.1l.04-.1l.04-.07c.04-.08.1-.14.2-.17l.04-.02c.08-.02.13-.1.13-.18c0-.1.05-.18.1-.25l.08-.07l.2-.26v-.02c.06-.08.1-.17.12-.27c.02-.1 0-.2-.04-.3l-.02-.04a.92.92 0 0 1-.07-.26l-.03-.28l-.03-.3c0-.1.04-.2.1-.3a.97.97 0 0 0 .16-.28v-.04l.02-.02c.02-.1-.03-.2-.12-.2c-.1-.05-.2-.13-.23-.25l-.03-.06c-.05-.18-.08-.36-.08-.54l.02-.5v-.03a.3.3 0 0 0-.3-.3h-.02c-.2 0-.36-.06-.5-.2l-.08-.1l-.2-.23l-.26-.3c-.1-.14-.2-.26-.33-.38c-.1-.1-.25-.2-.4-.22l-.2-.03c-.1-.02-.23-.07-.34-.14c-.08-.06-.2-.04-.28.04l-.13.14l-.06.04c-.07.02-.14-.02-.17-.1a.502.502 0 0 1 .02-.38v-.06c0-.07-.06-.12-.12-.1h-.16c-.18 0-.36-.02-.53-.1l-.1-.04a.764.764 0 0 0-.33-.08c-.1 0-.2.02-.3.08l-.04.03c-.12.08-.26.12-.4.13h-.33c-.15 0-.3.05-.4.13c-.13.08-.27.13-.42.16l-.27.04c-.12.03-.25.08-.36.17c-.1.1-.24.16-.37.2l-.05.02a.74.74 0 0 0-.4.3l-.12.12a.27.27 0 0 0 0 .32c.06.1.18.13.3.1l.15-.06c.08-.03.17 0 .24.04c.06.05.15.08.24.07l.25-.03c.14 0 .28 0 .42.04c.15.05.28.1.4.2s.25.14.4.16c.15.02.3.05.44.1l.1.02c.1.03.18.1.24.2c.05.08.1.2.1.3v.03c0 .12.1.2.2.2h.06c.16 0 .33.02.5.07l.07.03c.1.04.2.1.27.2c.08.1.13.2.16.3l.03.14c.03.15.04.3.04.46v.05c0 .1.07.2.18.24c.1.02.22.06.33.12l.05.02c.13.08.26.18.36.3l.05.07c.13.15.2.34.2.53v.07c0 .15-.03.3-.08.44c-.04.12 0 .26.13.3l.07.05c.15.06.28.17.38.3c.1.15.14.32.14.5v.3c-.02.1-.05.18-.1.25s-.05.17 0 .24l.06.1zm-6.4-5.12h-.02c-.04 0-.06.05-.05.1l.04.2c.04.16.06.32.08.48c.02.16.1.3.22.4h.04c.15.12.24.3.25.48v.5c-.02.1 0 .2.06.28l.05.05c.1.12.14.26.15.4l.03.55c0 .13-.08.24-.2.26l-.1.02c-.07 0-.1.08-.1.15c0 .08.03.17.06.25v.02c.03.1.04.2.03.3l-.04.27c-.04.2-.1.38-.2.56l-.07.12a.43.43 0 0 1-.2.2c-.1.04-.17.12-.2.22l-.08.36c-.05.2-.14.4-.26.6h-.02c-.12.16-.27.3-.45.4l-.12.08l-.3.15c-.1.04-.16.13-.18.24l-.05.33c-.03.2-.1.37-.24.5l-.13.15l-.15.15L11 21c-.12.14-.3.2-.5.17l-.36-.07l-.33-.04h-.09c-.04.04-.05.1-.02.16c.07.12.18.2.3.2l.22.04c.1 0 .22.05.32.1c.1.07.2.12.32.15h.02c.13.05.27.06.4.05l.15-.02c.17-.02.33 0 .47.06l.12.04c.05.02.13 0 .18-.05c.06-.06.12-.1.2-.13l.08-.02c.13-.04.26-.06.4-.06h.08c.12 0 .23.02.33.08l.04.02c.07.03.15 0 .2-.06c.03-.07.1-.14.17-.2l.25-.17l.16-.1l.08-.05c.1-.07.24-.1.36-.1l.36-.03c.14-.02.26-.12.3-.26c.04-.15.1-.3.2-.43s.2-.24.3-.34c.13-.1.26-.15.4-.16h.08c.16-.03.28-.18.27-.34v-.67c.02-.1.06-.23.12-.33l.2-.3l.08-.1c.06-.05.1-.12.17-.2l.1-.13a.27.27 0 0 0-.02-.32c-.1-.1-.15-.24-.17-.38v-.04c-.02-.16-.02-.33.03-.5v-.05c.05-.13.12-.26.2-.38c.08-.1.07-.24-.03-.32l-.17-.15a.74.74 0 0 1-.24-.48l-.02-.2c0-.06 0-.13-.02-.2l-.02-.15a.573.573 0 0 0-.26-.4l-.07-.02c-.1-.06-.2-.15-.28-.27c-.08-.1-.12-.24-.15-.38l-.03-.17c0-.06-.04-.1-.1-.13l-.16-.05l-.32-.1c-.1-.02-.2-.1-.27-.17h-.02a.143.143 0 0 0-.22-.02l-.1.1c-.02.03-.04.04-.07.03c-.06 0-.1-.05-.08-.1a.454.454 0 0 0-.17-.42l-.13-.1l-.3-.2c-.08-.03-.2 0-.24.1l-.04.06c0 .02-.03.03-.04.04c-.04 0-.1 0-.1-.05l-.03-.05c-.03-.06-.1-.1-.16-.12zm-1.2 1l-.05-.05c-.05-.04-.1-.03-.15.02c-.07.12-.13.25-.16.38v.02c-.03.13-.15.22-.27.2H11.35c-.14 0-.25.12-.25.26c0 .18-.06.36-.17.5l-.06.06c-.1.13-.25.22-.4.27l-.08.02c-.1.03-.18.1-.2.22c0 .1-.06.2-.14.28l-.1.08c-.12.13-.3.2-.48.22l-.5.05c-.16 0-.3.1-.4.25c-.1.15-.25.25-.4.27l-.22.02c-.16.02-.33.02-.5-.02l-.1-.02l-.27-.07c-.1-.03-.18 0-.24.07l-.1.13a.58.58 0 0 1-.5.2l-.65-.08c-.1 0-.18-.05-.27-.1c-.1-.06-.17-.13-.24-.2l-.25-.3c-.03-.02-.08-.03-.13-.02l-.14.06l-.56.14c-.1.03-.23 0-.33-.06c-.1-.08-.22-.1-.34-.1H3.2c-.12.03-.2.16-.16.28l.04.2c.03.1.02.22-.03.32s-.04.2.03.3l.06.08c.08.12.2.22.3.32c.1.1.2.2.28.33l.15.27c.08.14.2.22.36.22c.15 0 .3.05.42.15l.3.28c.08.07.2.08.28.02l.05-.02c.06 0 .1.04.1.1v.05c0 .13.1.25.23.3l.45.1c.16.05.32.1.47.2h.08c.08 0 .15-.07.14-.16v-.35c0-.1.04-.2.12-.24l.05-.02c.05.02.1.06.08.1v.17c0 .13.04.25.13.34c.1.1.23.12.34.08c.12-.05.24-.06.37-.05l.37.02c.18.02.35 0 .5-.07c.18-.06.33-.14.47-.25l.06-.04l.3-.27c.1-.1.23-.15.35-.15h.4c.2-.02.38-.2.4-.4l.04-.2c0-.13.06-.25.15-.35c.1-.1.2-.16.3-.2l.12-.05c.17-.07.3-.22.36-.4l.06-.24c.05-.2.15-.4.3-.53l.02-.02c.12-.1.14-.3.06-.44l-.03-.07a.42.42 0 0 1-.03-.38c.05-.14.1-.26.18-.38l.1-.14c.04-.08.04-.2-.02-.27a.478.478 0 0 1-.1-.28l-.02-.14v-.34c.02-.1 0-.23-.03-.33l-.04-.12zm-1.43-.76v-.03c0-.1-.06-.16-.14-.16h-.26c-.1.02-.2.02-.28 0h-.45c-.23 0-.45-.04-.67-.1l-.24-.06l-.2-.06l-.45-.15a.849.849 0 0 1-.53-.45l-.05-.1a.337.337 0 0 0-.37-.2c-.17 0-.34 0-.5-.08l-.12-.05c-.23-.1-.4-.3-.4-.57l-.04-.27c-.03-.14-.12-.27-.24-.32c-.14-.06-.27-.14-.4-.23l-.05-.03a1.1 1.1 0 0 1-.35-.47l-.02-.06a.94.94 0 0 1-.02-.5l.02-.06c.04-.13.05-.26.05-.4a.47.47 0 0 0-.14-.33l-.14-.13a.726.726 0 0 1-.27-.53c-.02-.22-.02-.43.02-.64v-.06a.2.2 0 0 0-.2-.2H4.2c-.13 0-.24.08-.3.2c-.05.14-.13.25-.22.36l-.04.05l-.2.2l-.1.1c-.1.1-.16.25-.18.4c-.02.15-.06.3-.12.44l-.02.05c-.05.12-.13.23-.23.3c-.1.08-.17.2-.17.32l-.02.46c0 .2-.03.4-.1.6l-.02.08c-.05.13 0 .27.12.33l.42.18l.04.02c.03 0 .04.02.05.05c.03.04 0 .1-.03.1l-.1.05c-.06.02-.1.08-.12.15l-.02.1v.02l-.1.56c-.02.08-.02.17-.02.26c0 .08.05.15.12.18l.22.1c.1.06.22.13.3.2l.1.08c.03.04.08.08.12.1l.04.04c.07.06.12.14.14.23l.1.45c0 .12.1.22.2.25l.16.05s.03 0 .05.02l.2.06c.16.05.3.14.42.26c.12.1.24.23.34.37l.04.04c.08.1.2.15.32.12s.25-.04.38-.04h.15c.1 0 .23.03.34.1c.1.06.23.1.35.15h.03c.12.05.25.03.35-.04c.1-.08.23-.12.36-.12l.47.03c.1 0 .2-.02.25-.1h.02l.17-.16l.05-.05c.08-.1.2-.14.32-.15h.45c.12 0 .23-.1.28-.2c.05-.1.15-.18.27-.2l.2-.04c.08 0 .15-.07.18-.16c.03-.1.08-.18.15-.24l.16-.16c.1-.1.15-.2.17-.32z" />
+              <rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="mainSection">
+      <div class="mainSection__photo">
+        <picture>
+          <source srcset="./img/IMG_2020.webp" type="image/webp" />
+          <img src="./img/IMG_2020.jpg" alt="profilePhoto" />
+        </picture>
+      </div>
 
-				<div class="phone">
-						<p class="phone__p">Есть вопросы? Звоните!</p>
-						<p class="phone__phone1"><a href="tel:8(800)200-40-17">8(800)200-40-17</a></p>
-						<p class="phone__phone2"><a href="tel:+7(499)404-14-31">+7(499)404-14-31</a></p>
-				</div>
-				
-				<div class="callback">
-					<p><a href="mailo:info@elockagori.ru">info@elockagori.ru</a></p>
+      <div class="mainSection__text">
+        <h1>Semyon Aleksandrov</h1>
+        <p>Junior Front-end / Junior Full-stack</p>
+        <article id="Summary">
+          <h2 class="Summary__title">Summary</h2>
+          <p class="Summary__text">
+            For a long time I have been working as a System Administrator
+            Windows / Linux. Always supported company websites. From SEO to
+            Back-end / Front-end. I decided to structure my knowledge in the
+            field of Front-end and work as a full-stack developer in the
+            future.
+          </p>
+        </article>
+        <article id="Skills">
+          <h2 class="Skills__title">Skills</h2>
 
-					<div class="callback-button">
-						<a href="#">ЗАКАЗАТЬ  ЗВОНОК</a>
-					</div>
-				</div>
-		</div>
+          <h3>Programming languages and technologies:</h3>
+          HTML5 (Semantic,cross-browser, adaptive and responsive layout),
+          CSS\SCSS\LESS\PostCSS, JS.
+          <h3>Frameworks and Libraries:</h3>
+          Bootstrap 4, VanilaJS, JQuery, a bit of experience with React.
+          <h3>Tools:</h3>
+          Figma, Photoshop, Gulp, Webpack, VS_Code, GIT.
+        </article>
+        <article id="ExpAndEducation">
+          <h2 class="ExpAndEducation__title">Expirience And Education</h2>
+          <p>My language level is A1. I work with technical documentation.</p>
+          <br>
+          <ul>
+            <li>A bit of expirience of freelance</li>
+            <li>Udemy - Colt Steele</li>
+            <li>WebStandarts - Vadim Makeev</li>
+            <li>Eloquent Javascript</li>
+            <li>You Don't Know Javascript</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
 
-		<nav>
-			<div class="container">
-				<div class="nav-toggle">
-					<span></span>
-				</div>
-				<ul id="container__nav_menu">
-					<li><a href="#cat1">Искуственные ёлки</a></li>
-					<li><a href="#cat2">Живые ёлки</a></li>
-					<li><a href="#cat3">Елочки из конфет</a></li>
-					<li><a href="#cat4">Украшения для елок</a></li>	
-				</ul>
-			</div>
-		</nav>
-
-	</header>
-	
-
-			
-	<section class="top">
-		<div class="container">			
-		
-			<h1 class="top__inner color-white">ИСПОЛЬЗУЙТЕ ВСЕ ВОЗМОЖНОСТИ</h1>
-			<h2 class="top__inner_2 color-white ">ПРИБЛИЖАЮЩЕГОСЯ ПРАЗДНИКА!</h2>
-			<p class="top__inner_3">Закажите новогодний набор сейчас и получите дополнительную   
-				<strong>скидку 15%</strong> от оптовых цен!</p>
-			
-			<form class="top__first_form" method="POST">
-				<p class="top__first_form_label">Получите оптовые цены сейчас</p>
-					<div class="top__first_form_input">
-						<input class="top__first_form_input_2" id="name" name="User" type="text" placeholder="Ваше Имя">
-						<input class="top__first_form_input_2" id="tel" name="tel" type="number" placeholder="Ваш телефон">
-					</div>
-					<div class="top__first_form_button">
-						<button class="top__first_form_button_2 color-white">Скачать прайс</button>
-					</div>
-			</form>			  
-		</div>
-	</section>
-
-	<section class="about">
-		<div class="container">
-			<h2>О нас</h2>
-			<div class="about__4_circles">
-				<ul>
-					<li><img src="images/about-item1.png" alt="about-item1.png"><p><strong>Мы производители</strong> Вы получите гарантию лучших цен</p></li>
-					<li><img src="images/about-item2.png" alt="about-item2.png"><p><strong>Бесплатная доставка</strong> по всей России</p></li>
-					<li><img src="images/about-item3.png" alt="about-item3.png"><p><strong>Ниже оптовых цен</strong> конкурентов на 17-23%</p></li>
-					<li><img src="images/about-item4.png" alt="about-item4.png"><p><strong>163000 семей</strong> встретили 2015 год с нами</p></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
-	<section class="middle">
-		<div class="container">
-			<div class="middle-wrapper color-white">
-			<h2>Закажите до 10 ноября</h2>
-			<p>на сумму от 100 000 рублей и получите дополнительную скидку 15%</p>
-			<p>В декабре скидка 5%</p>
-				<div class="middle-form">
-						<input class="middle-form__input" id="m_name" name="User" type="text" placeholder="Ваше Имя">
-						<input class="middle-form__input" id="m_tel" name="tel" type="number" placeholder="Ваш телефон">
-				</div>
-
-				<div class="middle-form">
-					<button class="middle-form__button color-white">Оставить заявку</button>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="count">
-		<div class="count_inner">
-			<h2>count</h2>
-			<p>У нас уже заказали:</p>
-			<span>1</span>
-			<span>5</span>
-			<p>человек</p>
-		</div>
-	</section>
-
-	<section class="effect">
-		<div class="container">
-			<div class="effect__inner-top">
-				<h2>Наши эффективные наборы</h2>
-				<p> Мы разработали для Вас готовые наборы
-					на основне статистики наших клиентов!
-				</p>
-			</div>
-			<div class="effect__inner-bot">
-				<div class="effect__box">
-					<img src="images/elki_1.jpg" alt="elki_1.png">
-					<ul>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">40 см. - 100 шт.</li>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">80 см. - 50 шт.</li>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">1500 см. - 30 шт.</li>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">2000 см. - 50 шт.</li>
-					</ul>
-					<p>Срок реализации - <strong>1 месяц</strong><br>
-						Ваша закупка - <strong>1 месяц</strong><br>
-						Ваша закупка - <strong>1 месяц</strong></p>
-					<button class="effect__button color-white">Оставить заявку</button>
-				</div>
-				<div class="effect__box">
-					<img src="images/elki_1.jpg" alt="elki_1.png">
-					<ul>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">40 см. - 100 шт.</li>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">80 см. - 50 шт.</li>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">1500 см. - 30 шт.</li>
-						<li><img src="images/elki_1_sm.png" alt="elki_1_sm.png">2000 см. - 50 шт.</li>
-					</ul>
-					<p>Срок реализации - <strong>1 месяц</strong><br>
-						  Ваша закупка - <strong>1 месяц</strong><br>
-						  Ваша закупка - <strong>1 месяц</strong></p>
-					<button class="effect__button color-white">Оставить заявку</button>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="review">
-		<div class="container">
-			<h2>Отзывы о нас</h2>
-			<div class="review__4box">
-				<div class="review__4box-box">
-					<img src="images/man_01.webp" alt="man_01.png">
-					<p class="review__p-top">Имя:.......<br>
-						Заказывал:.......<br>
-						Сумма заказа:.........<br></p>
-						<p class="review__p-bot">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-						   Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
-						   В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-						   <button class="review__button color-white">Заказать этот же набор</button>
-				</div>
-
-				<div class="review__4box-box">
-					<img src="images/man_01.webp" alt="man_01.png">
-					<p class="review__p-top">Имя:.......<br>
-						Заказывал:.......<br>
-						Сумма заказа:.........<br></p>
-						<p class="review__p-bot">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-						   Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
-						   В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-						   <button class="review__button color-white">Заказать этот же набор</button>
-				</div>
-
-				<div class="review__4box-box">
-					<img src="images/man_01.webp" alt="man_01.png">
-					<p class="review__p-top">Имя:.......<br>
-						Заказывал:.......<br>
-						Сумма заказа:.........<br></p>
-						<p class="review__p-bot">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-						   Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
-						   В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-						   <button class="review__button color-white">Заказать этот же набор</button>
-				</div>
-
-				<div class="review__4box-box">
-					<img src="images/man_01.webp" alt="man_01.png">
-					<p class="review__p-top">Имя:.......<br>
-						Заказывал:.......<br>
-						Сумма заказа:.........<br></p>
-						<p class="review__p-bot">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-						   Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
-						   В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
-						   <button class="review__button color-white">Заказать этот же набор</button>
-				</div>
-
-			</div>
-			<h2>Наше производство</h2>
-			<div class="review-3inrow">
-				<figure class="review-3inrow__img">
-					<img src="images/row_1.jpg" alt="row_1.png">
-					<figcaption>Контроль качества продукции</figcaption>
-				</figure>
-				<figure class="review-3inrow__img">
-					<img src="images/row_2.jpg" alt="row_2.png">
-					<figcaption>Пример выкладки</figcaption>
-				</figure>
-				<figure class="review-3inrow__img">
-					<img src="images/row_3.jpg" alt="row_3.png">
-				<figcaption>Сопутствующие товары</figcaption>
-				</figure>
-			</div>
-		</div>
-	</section>
-
-	<section class="catalog-1" id="cat1">
-		<div class="container">
-			<h2>Каталог искуственных елок</h2>
-			<div class="catalog-wrapper">
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="catalog-2" id="cat2">
-		<div class="container">
-			<h2>Каталог живых елок</h2>
-			<div class="catalog-wrapper">
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="catalog-3" id="cat3">
-		<div class="container">
-			<h2>Каталог елочек из конфет</h2>
-			<div class="catalog-3__wrapper">
-				<div class="catalog-3__box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="catalog-3__box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="catalog-3__box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="catalog-4" id="cat4">
-		<div class="container">
-			<h2>Каталог украшений для елок</h2>
-			<div class="catalog-wrapper">
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-				<div class="item-card-box">
-					<div class="item-card-detail">
-						<img src="images/sm-1.jpg" alt="sm-1.png"> 
-						<p><strong>Датская ёлка <br>(1-1,25 метров)</strong></p>
-						<p>Небольшое описание <br>елок на 2 строки</p>
-						<p>Цена за 10 шт. - <strong>1500 руб.</strong><br>
-							Цена за 50 шт. - <strong>5500 руб.</strong><br>
-							Цена за 100 шт. - <strong>11000 руб.</strong></p>
-					</div>
-					<div class="item-card-button">
-						<button class="item-card-button__button">Оставить заявку</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="contacts">
-		<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8081cd72a481454dc0e80ca3d7fc98135d951aa3ff18ca89b7a98ccde22ff29a&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-		
-		<div class="container bottom-line">
-			<div class="contacts-phone">
-				<img src="images/cont-2.png" alt="cont-2.png">
-				<div class="contacts-phone__wrapper">
-					<h3>Контакты</h3>
-					<ul class="contacts-phone__contacts-list">
-						<li><img src="images/location.png" alt="location.png" class="margin"><p>Москва, Павелецкая наб., дом 999, строение 1000</p></li>
-						<li><img src="images/time.png" alt="time.png"><p>Работаем без выходных с 9:00 до 18:00</p></li>
-						<li><img src="images/phone1.png" alt="phone1.png"><p class="map-phone">8(499)136-44-76</p></li>
-					</ul>
-				</div>	
-			</div>
-		</div>
-	</section>
-
-	<footer>
-		<div class="container flex">
-			<div class="logo">
-				<img src="images/logo.png" alt="logo">
-			</div>
-
-			<div class="phone">
-				<p class="phone__p">Есть вопросы? Звоните!</p>
-				<p class="phone__phone1"><a href="tel:8(800)200-40-17">8(800)200-40-17</a></p>
-				<p class="phone__phone2"><a href="tel:+7(499)404-14-31">+7(499)404-14-31</a></p>
-			</div>	
-
-			<div class="callback">
-				<p><a href="mailo:info@elockagori.ru">info@elockagori.ru</a></p>
-
-				<div class="callback-button">
-					<a href="#">ЗАКАЗАТЬ  ЗВОНОК</a>
-				</div>
-			</div>						
-		</div>
-
-	</footer>
-	<script>
-		// $('.nav-toggle').on('click', function(){
-		// $('#container__nav_menu').toggleClass('active');
-		// });
-		document.querySelector('.nav-toggle').onclick = function(){
-		document.querySelector('#container__nav_menu').classList.toggle("active");
-		}
-		</script>
+  </footer>
+  <script>
+    document.querySelector(".header__burger").onclick = function () {
+      document.querySelector(".header__nav-menu").classList.toggle("active");
+    };
+  </script>
 </body>
+
 </html>
